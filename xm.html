@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/1.css" />
+		<style type="text/css">
+			
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.cur{
+				background-color: #FFD700!important;
+			}
+			li{
+				list-style: none;
+			}
+		
+			body
+			{
+				background-color: black;
+			}
+/* 头部开始 */			
+			.tobu{
+				width: 100%;
+				height: 50px;
+				background-color: #FFFAFA;
+				position: fixed;
+				top: 0px;
+				z-index: 999;
+			}
+			.to{
+				width: 1000px;
+				height: 50px;
+				margin: 0px auto;
+			
+			}
+			.to li{
+				display: block;
+				width: 200px;
+				height: 50px;
+				float: left;
+				text-align: center;
+				line-height: 50px;
+				/* background-color: aqua; */
+				color: #999AAA;
+				transition: all 1.5s; 
+			  
+			}
+			.to li:hover{
+				color: #FC5531;
+				background-color: #999AAA;
+				border-radius: 50px;
+			}
+/*头部结束  */
+			
+	
+/* 中间开始 */	
+		
+			.gr{
+				width: 300px;
+				height: 300px;
+				background-color: #333333;
+				margin-left: 100px;
+				margin-top: 80px;
+				border-radius: 10px;
+			}
+			.zjian{
+				display: inline-block;
+				width: 1010px;
+				height: 8000px;
+				background-color: #333333;	
+				margin-top: -300px;
+				margin-left: 420px;
+				border-radius: 10px;
+				display: none;
+			}
+			.zjianer{
+				display: inline-block;
+				width: 1010px;
+				height: 5800px;
+				background-color: #333333;	
+				margin-top: -300px;
+				margin-left: 420px;
+				border-radius: 10px;
+				display: none;
+			}
+			.zjiansan{
+				display: inline-block;
+				width: 1010px;
+				height: 5800px;
+				background-color: #333333;	
+				margin-top: -300px;
+				margin-left: 420px;
+				border-radius: 10px;
+				display: none;
+			}
+			.bji_zjiansi{
+				display: inline-block;
+				width: 1010px;
+				height: 5800px;
+				background-color: #333333;	
+				margin-top: -300px;
+				margin-left: 420px;
+				border-radius: 10px;
+				/* display: none; */
+			}
+			@media (max-width:750px){
+				.gr{
+					display: none;
+				}
+				.zjian{
+					width: 700px;
+					margin: 80px auto;
+				}
+				.zjian>ul{
+					width: 700px;
+					margin-left: 50px;
+				}
+				.zjianer{
+					width: 700px;
+					margin: 80px auto;
+				}
+				.zjiansan{
+					width: 700px;
+					margin: 80px auto;
+				}
+				.bji_zjiansi{
+					width: 700px;
+					margin: 80px auto;
+				}
+			}
+			
+			
+			
+			
+			
+			
+		</style>
+		
+	</head>
+	<body id="body">
+<!--头部开始  -->
+		<div class="tobu">
+		<ul class="to">
+			
+			<li class="bianSen" onclick="xuexi('block','none','none',0,'none')  "><a href="#" style="display: block; text-decoration: none; color: #999AAA;">主页</a>
+
+			</li>
+			
+			<li class="bianSen" onclick="xuexi('none','block','none',1,'none')  "><a href="#" style="display: block; text-decoration: none; color: #999AAA;">学习经历</a>
+
+			</li>
+			<li class="bianSen" onclick="xuexi('none','none','block',2,'none')  "><a href="#" style="display: block; text-decoration: none; color: #999AAA;">成品案例</a>
+
+			</li>
+			<li class="bianSen" onclick="xuexi('none','none','none',3,'block')  "><a href="#" style="display: block; text-decoration: none; color: #999AAA;">笔记</a>
+
+			</li>
+			<li href="a">主页
+
+			</li>
+			
+		</ul>
+		</div>
+<!--头部结束  -->		
+		
+		<div class="gr">
+			<div class="tox">
+				<img src="img/to.jpg" alt="6" style="width: 48px; height: 48px; border-radius: 50%;"/>
+				<span>风</span>
+				<span class="xue x1" id="maLing">码龄：200天</span>
+				<span class="xue x2">学历保密</span>
+			</div>
+			
+			<div class="shul">
+				<div>
+				<div class="shulhe">151</div>
+				<div class="shulhe">18万</div>
+				<div class="shulhe">1万</div>
+				<div class="shulhe">18万</div>
+				<div class="shulhe">星</div>
+				<div class="shulhr">原创</div>
+				<div class="shulhr">周排名</div>
+				<div class="shulhr">总排名</div>
+				<div class="shulhr">访问</div>
+				<div class="shulhr">等级</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="zjian"  id="diyiye">
+			<ul>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				</ul>
+				<div class="yi">
+					<h2>纯方块</h2>
+				</div>
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				</ul>
+				<div class="er">
+					<h2>浮动</h2>
+				</div>
+				<div class="er x1"></div>
+				<div class="er x2"></div>
+				<div class="er x1"></div>
+				<div class="er x2"></div>
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				</ul>
+				
+				<div class="san">
+					<h2>鼠标经过换颜色</h2>
+				</div>
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				</ul>
+				
+				<div class="si"> 
+				<h2>鼠标经过宽度200px</h2>
+				</div>
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				</ul>
+				
+				<div class="wu"></div>
+
+				
+			</li>
+			<li class="boxf">
+					<ul>
+					<li> html </li>
+					<li> css </li>
+					</ul>
+					
+					<div class="liu">手机
+						<div class="yifw"></div>
+					</div>
+					<div class="liu">电脑
+						<div class="erfe"></div>
+					</div>
+					<div class="liu">家电
+						<div class="sanfq"></div>
+					</div>
+					
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				<input onclick="sum('visible')" value="原理" type="button">
+				<input onclick="sum('hidden')" value="恢复" type="button">
+				
+				</ul>
+				
+				<div id="qi">
+					<div id="tuup"> 
+						
+						
+					<img src="img/wb.png" alt="" />
+					<img src="img/wx.jpg" alt="">
+					<img src="img/zfb.png" alt="">
+					<img src="img/qq.jpg" alt="">
+					
+					</div>
+					
+				</div>
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				<li> js </li>
+				</ul>
+				<div id="ba"></div>
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				</ul>
+				
+				<select class="jiu">
+					
+				<option value="">下拉选择框</option>
+				<option value="001">河南省</option>
+				<option value="002">河北省</option>
+				<option value="003">山西省</option>
+				<option value="004">广东省</option>
+				<!-- 192.168.1.53 -->
+				</select>
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+			
+				</ul>
+				
+				<video class="shi" controls>
+				  <!--video:视频播放标签  controls：视频的基本配置  autoplay：自动播放-->
+				  
+				  <source src="img/sp.mp4" type="video/mp4">
+			<!--  source：定义了元素的多媒体 src:视频的路径  type="video/mp4": 支持的视频格式-->
+				</video>
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				<li> js </li>
+				</ul>
+				
+				<div id="shiy">
+					
+				</div>
+				
+				
+			</li>
+			<li class="boxf">
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				<li> js </li>
+				</ul>
+			 
+			<div class="shier">
+			 <input type="checkbox" class="xk"/> 北京（背景）
+			 <br>
+			 <input type="checkbox" class="xk"/> 上海 (商海)
+			 <br>
+			 <input type="checkbox" class="xk"/> 河南 (河难)
+			 <br>
+			 <input type="checkbox" id="fxk"  onclick="fxl()"/>全选
+			 <br>
+			 </div>
+				
+			</li>
+			<li class="boxf">
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				<li> js </li>
+				</ul>
+				
+				<div id="shisan">
+				<select id="xzk">
+					<option value="请选泽">返回用户选中的值</option>
+					<option value="选择的是东">东</option>
+					<option value="选择的是南">南</option>
+					<option value="选择的是西">西</option>
+					<option value="选择的是北">北</option>
+				</select>
+				<input type="submit" value="提交" id="tjj"  onclick="xz()"/>
+				<div id="scnr"></div>
+				
+				
+				</div>
+				
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				<li> js </li>
+				</ul>
+				
+				<input type="button" value="获取当前时间" onclick="dqsj()" id="dqsj1"/>
+				<input type="button" value="暂定当前时间" onclick="dqss()" id="dqsj" />
+				<div id="dqsj2"></div>
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				<li> js </li>
+				</ul>
+				
+				<input id="shiwu" type="button" value="点我彩蛋" onclick="shanc()"/>
+				
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				<input class="shiliuin1" type="button" value="原理" onclick="shiliu('visible','5px')"/>
+				<input class="shiliuin1" type="button" value="恢复" onclick="shiliu('hidden','0px')"/>
+				</ul>
+				
+				<div id="shiliu">
+					
+					<img class="shiliutp1" src="img/ks.png" alt="">
+					<img class="shiliutp2" src="img/ksann.png" alt="" />
+				</div>
+				<p>鼠标经过更换图片的margin - top 的位置即可</p>
+				
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				<li> js </li>
+				</ul>
+				
+				<div class="shiqi">
+					
+					<div class="boxx">
+						<p id="时间"></p>
+						
+					</div>
+					<div class="boxx"></div>
+					<div class="boxx"></div>
+					<div class="boxx"></div>
+					<div class="boxx"></div>
+					
+				</div>
+				
+				
+			</li>
+			<li class="boxf">
+				
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				<li><input type="button" value="显示学生信息" style="height: 30px;" onclick="xuesheng()"/></li>
+				</ul>
+				
+				<table border="2px" class="shiba">
+					<tr>
+						<td>姓名</td>
+						<td>年龄</td>
+						<td>身高</td>
+						
+						
+					</tr>
+					
+					<tbody id="xueshengxinxi">
+						
+						
+					</tbody>
+					
+				</table>
+			
+				
+			</li>
+			<li class="boxf">
+				<ul>
+				<li> html </li>
+				<li> css </li>
+				<li> js </li>
+				</ul>
+				
+				
+				
+				
+				
+			</li>
+			<li class="boxf"></li>
+			<li class="boxf"></li>
+			<li class="boxf"></li>
+			<li class="boxf"></li>
+			<li class="boxf"></li>
+			<li class="boxf"></li>
+			<li class="boxf"></li>
+			<li class="boxf"></li>
+			<li class="boxf"></li>
+			</ul>
+		</div>
+<!-- 		
+		第二页内容
+		第二页内容 
+		
+		第二页内容 
+		
+		第二页内容 
+		第二页内容 第二页内容 
+		
+		第二页内容 
+		第二页内容 
+		
+		第二页内容 
+		第二页内容 
+		第二页内容 
+		
+		第二页内容 
+		第二页内容 
+		
+		
+		
+		
+		 -->
+		<div id="dierye" class="zjianer">
+			<ul>
+				
+				
+				<li class="diery">
+					<p>当前内容是html + css + js</p>
+				
+					<p id="tianshu"></p>
+					
+					<img class="dierytp" src="img/diery.png" alt="" />
+					
+					<h2>你好</h2>
+					<span>跟的是杜老师学的HTML+css +js</span>
+					
+					
+				</li>
+				<li class="diery">
+					
+					<p>当前浏览器</p>
+									
+					<p id="tianshu1"></p>
+					
+					<img class="dierytp" src="img/duyi.png" alt="" />
+					
+					<h2>浏览器渲染主线程</h2>
+					<span>
+						浏览器的页面是单线程 执行
+						所以在加载js的函数时 ，先加载一遍全部的js 但是这里只会执行被定义的函数被调用的
+						但是js的执行顺序在浏览器的顺序是<br>
+						单线程	<br>最高：  微队列
+						<br>高 ：    用户点击事件	<br>中：     计时器事件<br>
+						浏览器只会把最高的微队列执行完才会往下面去（不论新加还是后来）
+						单线程是异步的原因
+						事件循环是异步的实现方式
+						异步可以解决浏览器阻塞问题
+						<a href="bj/index.html">图片展示js在浏览器单线程运动的过程</a>
+						
+					</span>
+					
+					
+				</li>
+				<li class="diery">
+					
+					<p>当前内容是:servlet</p>
+									
+					<p id="tianshu3"></p>
+					
+					<img class="dierytp" src="img/diers.png" alt="" />
+					
+					<h2>你好</h2>
+					<span>学习servlet</span>
+					
+					
+					
+				</li>
+				<li class="diery"></li>
+				<li class="diery"></li>
+				<li class="diery"></li>
+				<li class="diery"></li>
+				<li class="diery"></li>
+				<li class="diery"></li>
+				
+			</ul>
+			
+		</div>
+		
+		
+		<!--
+			第三页内容
+			第三页内容
+			第三页内容
+			第三页内容
+			第三页内容
+			第三页内容
+			第三页内容
+			
+			第三页内容
+			第三页内容
+			第三页内容
+			第三页内容
+			
+			第三页内容
+			
+			
+			第三页内容
+			第三页内容
+			
+			第三页内容
+			第三页内容
+			第三页内容
+			
+			第三页内容
+			第三页内容
+			第三页内容
+			
+				
+				
+				
+				
+				 -->
+				<div id="disanye" class="zjiansan">
+					
+					
+					<ul>
+						
+						<li class="disanyebox">
+							
+							<h2>当前作品无缝滚动</h2>
+							<p>复制源代码</p>
+							
+							
+							
+						  <div class="dahe">
+							<div id="he">
+								
+								<img src="img/1.jpg">
+								<img src="img/2.jpg">
+								<img src="img/3.jpg">
+								<img src="img/4.jpg">
+								<img src="img/1.jpg"/>
+								
+							</div>
+											
+						</div>	
+						
+						<div id="shangyiye"> <  </div>
+						<div id="xiayiye"> > </div>
+						
+						<ul id="shangyiyediyi">
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							
+						</ul>
+							
+							
+						</li>
+						<li class="disanyebox">
+							<h2>当前作品选项卡</h2>
+							<p>复制源代码</p>
+							
+							<div class="sanzsan">
+								<img src="img/6.png" alt="" />
+								<div id="hezi">
+									<button>1</button>
+									<button>2</button>
+									<button>3</button>
+									<button>4</button>
+									
+								</div>
+								
+								<div id="tpp">
+								   <section>
+										<img src="img/1.png" alt="" />
+								   </section>
+								   <section>
+										<img src="img/2.png" alt="" />
+								   </section>
+								   <section>
+										<img src="img/3.png" alt="" />
+								   </section>
+								   <section>
+										<img src="img/4.png" alt="" />
+								   </section>
+								</div>
+								
+							</div>
+							
+							
+						</li>
+						<li class="disanyebox">
+							<h2>当前作品：购物车</h2>
+							<p>复制源代码</p>
+							
+							<div class="sanzhangsan">
+							<ul>
+								<li onclick="goWuChu('红米k10',1,2899, )">
+								
+									<img src="img/1.webp" alt="">
+									<p>
+										<span>Redmi 红米k10 至尊版</span>
+										<span>￥2899</span>
+									</p>
+								</li>
+								<li onclick="goWuChu('红米k20',1,999, )">
+								
+									<img src="img/2.webp" alt="">
+									<p>
+										<span>Redmi 红米k20 至尊版</span>
+										<span>￥2899</span>
+									</p>
+								
+								</li>
+								<li onclick="goWuChu('红米k30',1,2899, )">
+								
+									<img src="img/3.webp" alt="">
+									<p>
+										<span>Redmi 红米k30 至尊版</span>
+										<span>￥2899</span>
+									</p>
+								</li>
+								<li onclick="goWuChu('红米k40',1,2899, )">
+								
+									<img src="img/4.webp" alt="">
+									<p>
+										<span>Redmi 红米k40 至尊版</span>
+										<span>￥2899</span>
+									</p>
+								</li>
+								</ul>
+								<ul>
+								<li onclick="goWuChu('红米k50',1,2899, )">
+								
+									<img src="img/5.webp" alt="">
+									<p>
+										<span>Redmi 红米k50 至尊版</span>
+										<span>￥2899</span>
+									</p>
+								</li>
+								<li onclick="goWuChu('红米k60',1,2899, )">
+								
+									<img src="img/6.webp" alt="">
+									<p>
+										<span>Redmi 红米k60 至尊版</span>
+										<span>￥2899</span>
+									</p>
+								</li>
+								<li onclick="goWuChu('红米k70',1,2899, )">
+								
+									<img src="img/7.webp" alt="">
+									<p>
+										<span>Redmi 红米k70 至尊版</span>
+										<span>￥2899</span>
+									</p>
+								</li>
+								<li onclick="goWuChu('红米k80',1,2899, )">
+								
+									<img src="img/8.webp" alt="">
+									<p>
+										<span>Redmi 红米k80 至尊版</span>
+										<span>￥2899</span>
+									</p>
+								</li>
+								
+							</ul>
+							
+							<table id="table">
+								<tr>
+
+									<td>商品名称	</td>
+									<td>商品个数</td>
+									<td>商品单价</td>
+									<td>商品总价</td>
+									<td>操作</td>
+								</tr>
+							
+							</table>
+							
+							
+						</div>
+							
+							
+						</li>
+						<li class="disanyebox">
+							
+							<h2>当前作品：购物车</h2>
+							<p>复制源代码</p>
+							
+							
+							<div class="sanzhangsiye">
+								
+								<div class="shuo">
+									商品名称<input type="text" id="shanpin"/>
+									商品个数<input type="text" id="geshu"/>
+									商品单价<input type="text" id="danJia"/>
+										<input type="button" value="添加" onclick=" tianJia()"/>
+										<input type="button" value="删除当前选中" onclick="shanChuKuang()"/>
+										<input type="button" value="当前金额" onclick="zoJia()"/>
+								</div>
+								
+								<table border="1px" id="tab">
+									<tr class = "trr">
+										<th style="text-align: left;"><input type="checkbox" value="01111"  style="width: 20px;height: 20px;" name = "chk" onclick="quanXuan()"/>全选</th>
+										<th>商品名称</th>
+										<th>购买个数</th>
+										<th>商品单价</th>
+										<th>商品总价</th>
+										<th>操作</th>
+										
+								
+									</tr>
+									<tr class = "trr">
+										<td><input type="checkbox" name="chk"  style="width: 20px;height: 20px;"/></td>
+										<td>黄瓜</td>
+										<td>1</td>
+										<td>250</td>
+										<td>250</td>
+										<td><input type="button" onclick="xiuGai(this)" value="修改"><input type="button" onclick="shanChu(this)" value="删除"></td>
+								
+									</tr>
+									<tr class = "trr">
+										<td><input type="checkbox"  name = "chk" style="width: 20px;height: 20px;"/></td>
+										<td>西红柿</td>
+										<td>1</td>
+										<td>150</td>
+										<td>150</td>
+										<td><input type="button" onclick="xiuGai(this)" value="修改"><input type="button" onclick="shanChu(this)" value="删除"></td>
+									
+									</tr>
+									<tr class = "trr">
+										<td><input type="checkbox" name = "chk" style="width: 20px;height: 20px;"/></td>
+										<td>豆角</td>
+										<td>1</td>
+										<td>66</td>
+										<td>66</td>
+										<td><input type="button"  onclick="xiuGai(this)" value="修改"><input type="button"onclick="shanChu(this)" value="删除"></td>
+									</tr>
+								</table>
+								<div id="neirrr"> 当前</div>
+
+							</div>
+							
+							
+							
+						</li>
+						<li class="disanyebox"></li>
+						<li class="disanyebox"></li>
+						<li class="disanyebox"></li>
+						<li class="disanyebox"></li>
+						<li class="disanyebox"></li>
+						<li class="disanyebox"></li>
+						<li class="disanyebox"></li>
+						<li class="disanyebox"></li>
+						<li class="disanyebox"></li>
+						<li class="disanyebox"></li>
+						<li class="disanyebox"></li>
+						<li class="disanyebox"></li>
+						
+						
+						
+					</ul>
+					
+
+					
+				</div>
+		
+		
+		<!--
+			第四页内容
+			第四页内容
+			第四页内容
+			第四页内容
+			第四页内容
+			第四页内容
+			第四页内容
+			
+			第四页内容
+			第四页内容
+			第四页内容
+			第四页内容
+			
+			第四页内容
+			
+			
+			第四页内容
+			第四页内容
+			
+			第四页内容
+			第四页内容
+			第四页内容
+			
+			第四页内容
+			第四页内容
+			第四页内容
+		
+	 -->
+	 
+			<div class="bji_zjiansi" id="bji_zjiansi">
+				
+				<ul class="siyeul">
+					
+					
+					<li>
+						<h1>声明类：</h1>
+						
+						<p>获取节点id</p>
+						<span>  var a = document.getElementById("节点ID");</span>
+						<br>
+						
+						<p>获取css类名字</p>
+						<span>var 变量名 = document.getElementsByClassName("bianSen")</span>
+						<br>
+						
+						
+						<p>获取元素第一个的元素（这里面可以添什么类型都可以）</p>
+						<span>var 标签名 = document.querySelector("节点名字");</span>
+						<br>
+						
+						
+						<p>获取某个ID下的标签名字</p>
+						<span>var butss = document.getElementById("hezi").getElementsByTagName("button");</span>
+						<br>
+						
+						
+						<p>获取某标签父级</p>
+						<span>标签名= 子级.parentNode.parentNode; .parentNode写一个上一级</span>
+						<br>
+					</li>
+					
+					<li class="bji_diyi">
+						<h1>js方法：</h1>
+						
+						<p>向下取整:</p>
+						<span>parseInt(); parseInt()函数则用于从字符串中解析出整数 解析为十六进制或八进制的整数 parseInt("123"); // 输出: 123</span>
+						<br>
+						
+						
+						<p>向下取整</p>
+						<span>Math.floor()始终返回一个整数，即使输入为负数</span>
+						<br>
+						
+						
+						
+						<p>获取某个标签长度：</p>
+						<span>标签名.length</span>
+						<br>
+						
+						<p>获取用户输入值</p>
+						<span>标签名.value</span>
+						<br>
+						
+						<p>获取某个复选框的选中情况:</p>
+						<span>标签名.checked</span>
+						<br>
+						
+						
+						<p>获取的时间自动转换</p>
+						<span>变量名.toLocaleString();</span>
+						<br>
+						
+						
+						<p>改变某个元素的标签里的内容</p>
+						<span>标签名.innerText ="";</span>
+						<br>
+						
+						
+						<p>给当前变量名加css 类名</p>
+						<span>标签名.className="cur"</span>
+						<br>
+						
+						
+						<p>隐藏某个标签元素</p>
+						<span>标签名.style.display = 'none';</span>
+						<br>
+						
+						
+						<p>表格插入行（首先获取表格）</p>
+						<span> 变量名 =  表格名.insertRow(1); （1）插入第1行</span>
+						<br>
+						
+						
+						
+						<p>插入某行第几列内容</p>
+						<span>var 变量名 = 插入行名.insertCell(0); （0）插入第0列</span>
+						<br>
+						
+						<p>获取某行某列</p>
+						<span>var 变量名=表格名.rows[i].cells[i]; .rows[i]获取行 .cells[i] 获取列 </span>
+						<br>
+						
+						<p>索引</p>
+						<span>butss[i].index = i; 用法搭配标签名[this.index].style.display = 'block'; [this.index] =i</span>
+						<br>
+						
+						
+						<p>给某个标签改背景颜色</p>
+						<span>标签名.style.backgroundColor = 'red';</span>
+						<br>
+						
+						<p>定时器</p>
+						<span>setInterval(ss,1000); ss 函数名字 1000时间单位（毫秒）</span>
+						<br>
+						
+						<p>暂停计时器（前提是给计时器一个变量名字）</p>
+						<span>clearInterval(v);</span>
+						<br>
+						
+						
+						
+						<p></p>
+						<span></span>
+						<br>
+						
+						<p></p>
+						<span></span>
+						<br>
+						
+						<p></p>
+						<span></span>
+						<br>
+						
+						<p></p>
+						<span></span>
+						<br>
+					</li>
+					
+					
+					
+					<li>
+						
+						<h1>js 时间类：</h1>
+						
+						<p>获取当前时间：     		  </p>
+						<span>var b = new Date; </span>
+						<br>
+						
+						<p>获取之前的时间：	  		  </p>
+						<span>var a = new Date("2023/6/24/");	</span>
+						<br>
+						
+						<p>当前时间减之前时间即可计时间：  </p>
+						<span>var time = parseInt( (b.getTime() - a.getTime() )/1000 );</span>
+						<br>
+					</li>
+					<li>
+						<h1>事件类：</h1>
+						
+						<p>鼠标经过</p>
+						<span>标签名.onmouseover</span>
+						<br>
+						
+						<p>点击事件</p>
+						<span>标签名.onclick</span>
+						<br>
+						
+						
+						
+					</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				
+			</div>
+		
+		
+	</body>
+	
+	<script type="text/javascript">
+			
+			
+		setInterval("mLing()",1000);
+			function mLing(){
+				
+				var maLing = document.getElementById("maLing");
+				var a = new Date("2023/6/24/");
+				var b = new Date;
+				
+				var time = parseInt( (b.getTime() - a.getTime() )/1000 );
+				// console.log(time);
+				
+				var tian = parseInt	( time/3600/24 );
+				// console.log(tian);
+				
+				maLing.innerText = "码龄：" +  tian + "天";
+				
+			}
+		
+			
+		
+		var qi = document.getElementById("qi");
+		var ba = document.getElementById("ba");
+		var sy  = document.getElementById("shiy");
+		function sum(x){
+			qi.style.overflow = x;
+			// 点的是按钮控制的是qi方块 上面俩个按钮传值注意引号
+			
+		}
+		
+		setInterval(ss,1000);
+		// setInterval： 计时器  （ss:函数名字，1000 ：计时器时间单位毫秒） 现在是1秒1执行ss这个函数 
+		function ss(){
+			var wlsj  = new Date("2025/5/1/2:25:00");
+			var xzsj  = new Date();
+			ba.innerHTML = "现在时间" + xzsj;
+			
+			var zoshu = parseInt( (wlsj.getTime() - xzsj.getTime() )/1000);
+			// console.log(zoshu)//目前总数是秒数
+			// 看不懂就去搜索秒数如何转换分钟 天数 秒数
+			// 看不懂就去搜索秒数如何转换分钟 天数 秒数
+			// 看不懂就去搜索秒数如何转换分钟 天数 秒数
+			// 看不懂就去搜索秒数如何转换分钟 天数 秒数
+			// 看不懂就去搜索秒数如何转换分钟 天数 秒数
+			
+			var tian = parseInt(zoshu/3600/24);
+			 // 	console.log(tian);
+			 
+			 var h = parseInt(zoshu/3600%24);
+			 // console.log(h);
+			 
+			 var f = parseInt(zoshu/60%60); 
+			// console.log(f);
+			
+			var  m =parseInt(zoshu%60);
+			// console.log(m);
+			sy.innerHTML = "距离5月份：：" + tian  + "天" + h + "小时" + f + "分" + m +"秒"; 
+		}
+// 全选框判断
+		function fxl(){
+			var a = document.getElementById("fxk");
+			var b = document.getElementsByClassName("xk")
+			
+			for(i=0; i<b.length; i++){
+				b[i].checked = a.checked;
+			}
+		}
+		
+		function xz(){
+			var xzk = document.getElementById("xzk");
+			var tjjk = document.getElementById("tjj");
+			var sc  = document.getElementById("scnr");;
+				// var c = xzk.value;
+				//c 等于 xzk的value的值
+				
+			   sc.innerText = "您选择的是：" + xzk.value;
+			    // sc.innerText = "您选择的是：" + c;
+			   //输出c
+		}
+		
+		var dqsj1 = document.getElementById("dqsj1");
+		var dqsj2 = document.getElementById("dqsj2")
+		
+		function dqsj(){
+			 v = setInterval("ddd()",1000);
+			 // 全局变量
+		}
+		
+		function ddd(){
+			var time = new Date();
+			
+			dqsj2.innerHTML = "当前时间" + time.toLocaleString();
+		}
+		
+		function dqss(){
+
+			clearInterval(v);
+		}
+		
+		function shanc(){
+			
+			if( confirm("确定触发菜蛋") ){
+				
+				document.getElementById("body").style.display = "none";
+				document.write("天才全部删除了你看个蛋" + "<br>" + "天才全部删除了你看个蛋");
+			}
+				
+		}
+// 十六的原理
+		function shiliu(x,y){
+			var shil = document.getElementById("shiliu");
+			shil.style.overflow = x;
+			shil.style.borderWidth =y; 
+			
+		}
+// 切换页面第一个
+
+			var a = document.getElementsByClassName("bianSen");
+			a[0].style.backgroundColor = 'red';
+			
+		function xuexi(x,y,z,m,k){
+			
+			var a = document.getElementsByClassName("bianSen");
+			
+			for(var i=0;i<a.length;i++){
+				a[i].style.backgroundColor = '';
+			}
+			a[m].style.backgroundColor = 'red';
+			
+			
+			
+			var diyi = document.getElementById("diyiye");
+			var dier = document.getElementById("dierye");
+			var disan = document.getElementById("disanye");
+			var disi = document.getElementById('bji_zjiansi')
+			
+			diyi.style.display = x;
+			dier.style.display = y;
+			disan.style.display = z;
+			disi.style.display = k;
+			
+			
+		}
+		
+			daojis();
+			setInterval(daojis,3600)//计时器
+		
+			function daojis(){
+				var xs = document.getElementById("tianshu");
+				var xs1 = document.getElementById("tianshu1");
+				var xs3 = document.getElementById("tianshu3");
+				
+				var cssj = new Date("2023/9/1");
+				var dysj = new Date("2024/8/29");
+				var ersan = new Date("2024/9/8")
+				var xianzaisjian = new Date();
+				// 声明俩个时间对象记得加new 
+					
+				var wenZi = "距离学习完这个已经过去:";
+//第一个 
+				var time = parseInt( ( xianzaisjian.getTime() - cssj.getTime() )/1000 );
+				// 现在时间 减去 以前时间  = 过去了当时时间 parseInt = 是小数转整数
+				// console.log(time);
+				
+				var tian  = parseInt(time/3600/24); 
+				xs.innerText = wenZi +  tian + "天";
+				
+// 第二个
+				var time1 = parseInt( ( xianzaisjian.getTime() - dysj.getTime() )/1000 );
+				
+				var tian1  = parseInt(time1/3600/24); 
+				xs1.innerText = wenZi +  tian1 + "天";
+			 
+// 第三个    
+				var time2 = parseInt( (xianzaisjian.getTime() - ersan.getTime() )/1000 );
+				
+				var tian3 = parseInt( time2/3600/24 );
+				xs3.innerText = wenZi + tian3  + "天";
+				
+			
+			
+			}
+				
+// 显示学生信息的函数
+			function xuesheng(){
+				var a = document.getElementById("xueshengxinxi");
+				
+				var b = "{	\"top\" : 3,\"xin\" : [{\"name\": \"李平\",\"age\" : 36,}, {\"name\": \"王艳华\",\"age\" : 38,},{ \"name\" : \"悦贵红\" , \"age\" : 32, }]   }"  ;
+					
+				eval( "var c= "  + b );
+				// console.log( "c的值"  +  c.top);
+				
+				d = "";
+				for(var i=0; i<c.xin.length; i++){
+					
+					// c.xin是数组的属性名字 便利的是c.xin 的 数组
+					d += "<tr>"
+					
+						d += "<th>" + c.xin[i].name + "</th>";
+						
+						// d 等于给d赋值 c.xin 的第 0 个数组 下面的name的数值 //李平
+						
+						d += "<th>" + c.xin[i].age+ "</th>";
+					
+					d += "</tr>"
+					
+					
+				}
+				
+				a.innerHTML = d;
+				
+			//  函数末尾
+				}
+// 无缝滚动
+			var heee = document.getElementById("he");
+			
+			var xia = document.getElementById("xiayiye");
+			var shang = document.getElementById("shangyiye");
+			
+			var ann2 = document.getElementById("shangyiyediyi").getElementsByTagName('li');
+			// 获取id 为shangyiyediyi 下标的 标签 li
+			
+			var ann1 = document.querySelector("#shangyiyediyi");	
+			// 获取用户点击具体的那个部件
+			
+			var shuzi = 0;
+			var mb = -3200;    //总图片的值  
+			var time;
+			
+			run()
+			
+			function run(){
+				if(shuzi < mb){
+					shuzi= 0;
+				}
+			
+				var n = (shuzi%800 ==0) ? n =1200 : n=10;
+				shuzi -=10;  //g=这个的在判断下面不然下面传来的值会被改
+				heee.style.marginLeft = shuzi + "px";
+			
+				time = setTimeout(run,n);
+		
+				var szz = Math.floor(shuzi/ -800);
+				yansee(szz);
+			}
+			
+			he.onmousemove = function(){
+				clearTimeout(time);
+			}
+			he.onmouseout = function(){
+				run();
+			}
+			shang.onclick = function(){
+				var shangde = Math.floor(shuzi/ (-800) ) - 1;
+				if(shangde == -1){
+					shangde =3;
+				}
+				chuanzhi(shangde);
+				yansee(shangde);
+			}	
+			xia.onclick = function(){
+				var shangde1 = Math.floor(shuzi/ (-800)) +1; 
+				if( shangde1 == 4 ){
+					shangde1 = 0;
+				}
+				chuanzhi(shangde1);
+				yansee(shangde1);
+				
+			}
+			function chuanzhi(x){
+				var zhi = ( x*(-800) );
+				he.style.marginLeft = zhi + 'px';
+				shuzi = zhi;
+			}
+			ann1.onclick = function(){
+				var shu1 = event.target;
+				var shu2 = shu1.innerHTML -1;
+				chuanzhi(shu2);
+				yansee(shu2);
+				
+			}
+			function yansee(x){
+				for(var i=0;i<ann2.length;i++){
+					ann2[i].style.background = "";
+				}
+				if(x<ann2.length){
+					ann2[x].style.background = "blue";
+				}
+					
+		
+			}
+// 选项卡
+		
+			var butss = document.getElementById("hezi").getElementsByTagName("button");
+			var gaibing = document.getElementById("tpp").getElementsByTagName("section");
+			
+			for(var i=0;i<butss.length;i++){
+				// console.log(i);
+				butss[i].index = i;
+				 butss[0].className="cur";
+				
+			
+	
+			butss[i].onmouseover = function(){
+				
+				for(var m=0;m<butss.length;m++){
+					butss[m].className="";
+				}
+					this.className="cur";
+				for(var p=0;p<butss.length;p++){
+					gaibing[p].style.display = 'none';
+				}
+				gaibing[this.index].style.display = 'block';
+				
+			}
+	}
+	
+	//购物车 
+			function goWuChu(x,y,z){
+				var ta = document.getElementById("table");
+				var tr = ta.insertRow(1);
+				
+				m = y*z
+				
+				var tr01 = tr.insertCell(0);
+				tr01.innerHTML = x;
+				
+				var tr02 = tr.insertCell(1);
+				tr02.innerHTML = y;
+				
+				var tr03 = tr.insertCell(2);
+				tr03.innerHTML = z;
+				
+				var tr04 = tr.insertCell(3);
+				tr04.innerHTML = m;
+				
+				var tr05 = tr.insertCell(4);
+				tr05.innerHTML = "<input type = 'button'  onclick='shanChu(this)' value = '删除'/>";
+				
+			
+			
+			}
+			function shanChu(x){
+				var tr= x.parentNode.parentNode;
+					tr.style.display = 'none';
+		
+			}
+
+			
+			
+	</script>
+	<script src="in.js" type="text/javascript" charset="utf-8"></script>
+</html>
