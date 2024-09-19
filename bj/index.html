@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="bj.css" />
+	</head>
+	<body>	
+	
+			<div class="shijian">
+			<input id= "ann" type="button" value="执行"/>
+			</div>
+			
+		<div class="box"> 浏览器的单线程执行 执行js的时候首先执行 js的全局变量 
+		
+			
+			<div class="box box1" id="bo1">计时器事件</div>
+			<div class="box box2" id="bo2">用户事件</div>
+			<div class="box box3" id="bo3">微事件</div>
+			<div class="box box4" id="bo4">加载全局变量</div>
+		
+		</div>
+		<ul>
+			
+			<li class="boo">
+				<div class="boo1">信息等待框</div>  
+				<div class="boo1">微事件</div> 
+			
+			</li>
+			<li class="boo">
+				<div class="boo1">信息框等待</div> 
+				<div class="boo1">用户事件</div>
+				</li>
+			<li class="boo">
+				
+				<div class="boo1">信息等待框</div> 
+				<div class="boo1">计时器事件</div> 
+			</li>
+			<li class="boo"><div class="boo1">计时器等待</div> </li>
+			
+		</ul>
+		
+		<script type="text/javascript">
+			var a = document.getElementById("ann");
+			
+			a.onclick  = function(){
+				var b1 = document.getElementById("bo1");
+				var b2 = document.getElementById("bo2");
+				var b3 = document.getElementById("bo3");
+				
+				b1.style.marginTop = 550 + "px";
+				b1.style.marginLeft = 100 + "px";
+				
+				b2.style.marginTop = 300 + "px";
+				b2.style.marginLeft = 450 + "px";
+				
+				b3.style.marginTop = 170 + "px";
+				b3.style.marginLeft = 450 + "px";
+			}
+			
+			
+			
+			
+			
+		</script>
+		
+	</body>
+</html>
