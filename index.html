@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>快捷网站</title>
+		<style type="text/css">
+
+			*{
+				margin: 0;
+				padding: 0;
+				list-style:none;
+			}
+			#sz{
+				width: 520px;
+				height: 50px;
+				margin: 0 auto;
+				font-size: 10px;
+				text-align: center;
+			}
+			#sz input{
+				width: 100px;
+				height: 50px;
+
+			
+			}
+
+			.to{
+				display: flex;
+				justify-content: center;
+				margin-top: 50px;
+
+			}
+			.to .ss{
+				width: 800px;
+				height: 50px;
+				border-radius:60px;
+				border: #999AAA 2px solid;
+				text-indent: 2em;
+				font-size: 25px;
+				outline: none;
+				box-shadow: 10px 10px 20px 0px black;
+
+			}
+			.to .tt{
+				width: 100px;
+				height:54px;
+				border-radius: 20px;
+				position: relative;
+				top: 0px;
+				margin-left: -100px;
+				font-size: 25px;
+				border: #999AAA 2px solid;
+			}
+			.to .tt:hover{
+				color: blueviolet;
+
+			}
+			/* 主题 */
+			.box{
+				width: 1200px;
+				height: 1000px;
+				 /*background-color: #00F5FF;*/
+				margin: 13px 250px;
+				padding-top: 40px;
+			}
+			.box ul li{
+				width: 500px;
+				height: 120px;
+				float: left;
+				margin-left: 40px;
+				margin-top: 26px;
+				background-color: white;
+				border-radius: 20px;
+				
+			}
+			.box ul li:hover{
+				box-shadow: 5px 5px 20px 5px black;
+			}
+			.box ul li div img{
+				width: 80px;
+				height: 80px;
+				margin-top: 20px;
+				margin-left: 20px;
+				float: left;
+
+			}
+			.box ul li h2{
+				color: black;
+				margin-left: 120px;
+			}
+			.box ul li p{
+				margin-left: 120px;
+				color: #999AAA;
+			}
+			.box ul li div p:nth-child(5){
+				margin-left: 380px;
+				width: 100px;
+				height: 30px;
+				color: #eeeeee;
+				text-align: center;
+				border-radius: 20px;
+				background-color: red;
+				line-height: 30px;
+				transition: 0.5s;
+			}
+			.box ul li div p:nth-child(5):hover{
+				margin-top: -5px;
+				color: #2196F3;
+			}
+			.box ul li a{
+				text-decoration: none;
+			}
+			
+			/* 倒计时 */
+			
+			
+			#demo{
+				width: 450px;
+				height: 80px;
+				background-color: black;
+				font-size: 30px;
+				color: #FF0000;
+				margin: 0 auto;
+				text-align: center;
+				
+			}
+			.jingXuan{
+				display: flex;
+				margin: 50px 320px ;
+				width: 1000px;
+				height: 100px;
+			}
+			.jingXuan img{
+				width: 50px;
+				height: 50px;
+			}
+			.jingXuan li{
+				margin-right: 70px;
+				text-align: center;
+
+			}
+			.jingXuan li:hover{
+				margin-top: -5px;
+			}
+			.jingXuan li a{
+				display: block;
+				width: 100px;
+				height: 100px;
+				border-radius: 20px;
+				box-shadow: 0px 0px 10px 10px #999AAA;
+				text-decoration: none;
+				color: #999AAA;
+
+			}
+
+			@media (max-width:750px){
+				
+				.box ul{
+					width: 600px;
+					margin-left: -270px;
+				}
+				
+				.to .ss{
+					width: 560px;
+					margin-left: -270px;
+					
+				}
+				.box>div{
+					display: none;
+					
+				}
+				}
+			
+			
+			
+			
+		</style>
+	</head>
+	<body id="bod" style="background-color: #f1f5f9">
+			
+		<!-- 倒计时 -->
+			<div id="demo">
+		
+			</div>
+		
+		
+			<div id="sz">
+				<input style="background-color: white;" type="button" value="白色" onclick="color('white')"/>
+				<input style="background-color: red;"   type="button" value="红色" onclick="color('red')" />
+				<input style="background-color: green;" type="button" value="绿色" onclick="color('green')"/>
+				<input style="background-color: blue;" type="button" value="蓝色"  onclick="color('blue')"/>
+				<input style="background-color: fuchsia;" type="button" value="粉色"  onclick="color('fuchsia')"/>
+		
+			</div>
+			<!-- <form class="to"  target="_blank" method="get" action="https://cn.bing.com/">
+				<input class="ss" type="text" name="p" placeholder="今天想要了解什么呢~(*＞◡❛)♡" />
+				<input class="tt" type="submit" value="百度一下"/>
+			</form> -->
+
+			
+				<form class="to" target="_blank" method="get" action="https://cn.bing.com/" >
+					<input class="ss" type="text"  placeholder="今天想要了解什么呢~(*＞◡❛)♡" name="q" class="text" />
+					<input class="tt" type="submit"  value="搜索！" class="search">
+				</form>
+
+
+				<ul class="jingXuan">
+					<li>
+						<a href="https://www.bilibili.com/" target="_blank"	>
+							<div>
+								<img src="img/blbl.png"  title="一个非常好的短视频网站"  alt="图片被外星人劫走了"><br>
+								哔哩哔哩
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="xm.html" target="_blank">
+							<div>
+								<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+								博客作品
+
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.wenshushu.cn/" target="_blank">
+							<div>
+								<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+								文叔叔
+
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="shangcheng.html" target="_blank">
+							<div>
+								<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+								游戏商城
+
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/" target="_blank"	>
+							<div>
+								<img src="img/blbl.png"  title="一个非常好的短视频网站"  alt="图片被外星人劫走了"><br>
+								github
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.bilibili.com/" target="_blank"	>
+							<div>
+								<img src="img/blbl.png" title="一个非常好的短视频网站"  alt="图片被外星人劫走了"><br>
+								哔哩哔哩
+							</div>
+						</a>
+					</li>
+
+				</ul>
+				
+				
+			<div class="box">
+			<ul>
+			
+				<li>
+					<a href="https://www.bilibili.com/" target="_blank"	>
+					<div>
+					<img src="img/blbl.png"  title="一个非常好的短视频网站"  alt="图片被外星人劫走了"><br>
+						<h2>哔哩哔哩</h2>
+						<p>一个教学质量非常好的短视频软件</p>
+						<p>点击进入</p>
+					</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://iconpark.oceanengine.com/official" target="_blank">
+						<div>
+							<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>前端设计图标源码</h2>
+							<p>提供了各种图标的源码</p>
+							<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://wallpaperscraft.com/catalog/anime" target="_blank">
+					<div>
+					<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+					<h2>壁纸网站</h2>
+					</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://ywyj.cn/" target="_blank">
+						<div>
+							<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+								<h2>一网一匠</h2>
+								<p>资料</p>
+								<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.xianyudanji.net/" target="_blank">
+						<div>
+							<img src="img/xydj.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>闲鱼单机</h2>
+							<p>可以白嫖盗版游戏下载的网站</p>
+							<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.3dmgame.com" target="_blank">
+						<div>
+							<img src="img/3dmh.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>3Dm官网</h2>
+							<p>可以下载单机游戏的修改器</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://github.com/" target="_blank">
+						<div>
+							<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>github</h2>
+							<p>开源程序非常强大的网站</p>
+							<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.iconfont.cn/illustrations/index?spm=a313x.search_index.i3.7.21663a81D1UGAJ" target="_blank">
+						<div>
+							<img src="img/1.svg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>阿里云图标</h2>
+							<p>登录||设计好的图标</p>
+							<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+				
+			</ul>
+			
+			<!-- 第二排 -->
+			<ul>
+
+				<li>
+					<a href="https://zz.ke.com/?utm_source=biying&utm_medium=pinzhuan&utm_term=biaoti&utm_content=biaotimiaoshu&utm_campaign=wymoren" target="_blank"	>
+						<div>
+							<img src="img/zf.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>贝壳</h2>
+							<p>可以租房子</p>
+							<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+
+
+
+
+				<li>
+					<a href="https://www.yunedit.com/createcert" target="_blank">
+						<div>
+							<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+								<h2>前端免费证书</h2>
+								<p>手机软件免费证书</p>
+								<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+				
+				<li>
+					<a href="https://design.meijian.com/mj-box/ai-pic-matting-intro?utm_source=ywyjkt&utm_source=xinquji/" target="_blank">
+					<div>
+					<img src="img/2.svg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+						<h2>Ai抠图</h2>
+						<p>登录||可以一键扣出人物，去除背景</p>
+						<p>点击进入</p>
+					
+					</div>
+					</a>
+				</li>
+				
+			</ul>
+			
+			<!-- 第三排 -->
+			
+			<ul>
+				<li>
+					<a href="https://jpghi.com/?utm_source=xinquji/" target="_blank">
+						<div>
+							<img src="img/ma"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>Ai修图去除马赛克</h2>
+							<p>免费||可以把模糊的图片复原</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://jpgrm.com/?utm_source=xinquji" target="_blank">
+						<div>
+							<img src="img/xiangpi"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>Ai去除图片如何元素</h2>
+							<p>可以为您去除图片上的如何元素</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.wenshushu.cn/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>默认</h2>
+							<p>默认</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+				
+
+
+				<li>
+					<a href="https://www.wenshushu.cn/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>默认</h2>
+							<p>默认</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.wenshushu.cn/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>默认</h2>
+							<p>默认</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+				
+
+				
+			</ul>
+			
+			<!-- 第四排 -->
+			<ul>
+
+
+				<li>
+					<a href="https://www.wenshushu.cn/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>默认</h2>
+							<p>默认</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.wenshushu.cn/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>默认</h2>
+							<p>默认</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.wenshushu.cn/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>默认</h2>
+							<p>默认</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.wenshushu.cn/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>默认</h2>
+							<p>默认</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.wenshushu.cn/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>默认</h2>
+							<p>默认</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="https://www.wenshushu.cn/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>默认</h2>
+							<p>默认</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+				
+			</ul>
+			</div>
+	</body>
+	<script type="text/javascript">
+		var an = document.getElementById("bod");
+		
+		function color(x){
+			document.body.style.backgroundColor = x;
+		}
+		
+		//倒计时：
+		var demo=document.getElementById("demo");
+		var endTime=new Date("2025/2/1 22:35:0");
+		// 声明目标时间
+		 setInterval(clock,1000);
+		function clock(){
+			
+			var nowTime=new Date();
+			// 声明现在的时间
+			// console.log(nowTime.getTime());// 1724590896086
+			
+		//(目标时间-现在时间)/1000是要把毫秒排除掉
+		var second=parseInt((endTime.getTime()-nowTime.getTime())/1000);
+		// console.log(second);
+		
+//方法 . getTime 输出的是当前的是秒数 精确到毫秒13748545 后5位毫秒  /1000是要把毫秒排除掉
+		
+		//现在的second是倒计时秒数
+		//second/3600是剩余的小时，除24是不是1天
+		//一个小时=3600秒
+		// 一分钟 = 60秒
+//得到天
+		var d=parseInt(second/3600/24);
+			// console.log(d);
+		
+//得到小时	
+		//%返回的 值是当前的 余数  13748545 除于3600 除于24 取他的商的余数值
+		var h=parseInt(second/3600%24);
+		// console.log(h);	
+		
+//得到分钟		
+		//得到分 4200/60=70分  转换:1小时10分钟
+		var m=parseInt(second/60%60)
+		// console.log(m);
+		
+//得到秒数	
+		var s=parseInt(second%60)
+		// console.log(s)
+		
+		d<10?d="0"+d:d;
+		h<10?d="0"+d:h;
+		m<10?d="0"+d:m;
+		s<10?d="0"+d:s;
+		demo.innerHTML="毕业:"+d+"天"+h+"小时"+m+"分"+s+"秒";
+		}
+		
+		
+		
+		
+		an.onkeydown = function(x){
+			// console.log(x);
+			if(x.keyCode == 13){
+				document.body.style.backgroundColor = "#999AAA";
+				console.log("灰色")
+			}else{
+				document.body.style.backgroundColor = "#f1f5f9";
+				console.log("白色")
+			}
+		}
+	</script>
+</html>
