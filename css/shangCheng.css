@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.scrollable::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+}
+.daoHan{
+    width: 100%;
+    height: 40px;
+    background-color: #2B2B2B;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.daoHan span{
+    margin-right: 20px;
+}
+
+.daoHan span a{
+    text-decoration: none;
+    color: #FFFFFF99;
+}
+.daoHan span a:hover{
+    color: #FC5531;
+}
+
+.daoHan .qieHuaSe{
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10px;
+    background-color: white;
+    text-align: center;
+    line-height: 30px;
+    position: relative;
+}
+.daoHan .qieHuaSe .yuanQuan{
+    width: 30px;
+    height: 30px;
+    border-radius: 70px;
+    background-color: #2B2B2B;
+    margin-left: 0px;
+    transition: 0.5s linear;
+}
+.soSuo{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.soSuo input{
+    width: 400px;
+    height: 40px;
+    border: 2px solid #F83314;
+    border-radius: 20px;
+    text-indent: 2em;
+    outline: none;
+}
+.soSuo button{
+    position: relative;
+    left: -50px;
+    width: 100px;
+    height: 44px;
+    background-image: linear-gradient(to right, #F83314 , yellow);
+    border-radius: 20px;
+    border: none;
+    color: #F8F8FF;
+
+}
+.guoDong{
+    width: 700px;
+    height: 300px;
+    /*border: 1px solid red;*/
+    margin-top: 40px;
+    margin-left: 400px;
+    position: relative;
+}
+.guoDong .guoDongYe{
+    position: absolute;
+    width: 5000px;
+    height: 300px;
+    margin-left: -700px;
+}
+.guoDong  .guoDongYe .dongHua{
+    width: 700px;
+    height: 300px;
+    border-radius: 20px;
+    margin-right: 20px;
+    opacity: 0.5;
+    float: left;
+}
+.guoDong .guoDongYe .box1{
+    background-color: #FFD700;
+}
+.guoDong .guoDongYe .box2{
+    background-color: #FC5531;
+}
+.guoDong .guoDongYe .box3{
+    background-color: blue;
+}
+.guoDong .box{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #333333;
+    opacity: 0;
+    text-align: center;
+    line-height: 40px;
+    color: #F8F8FF;
+}
+
+.guoDong .ye1{
+    position: absolute;
+    top: 120px;
+    left: 680px;
+}
+.guoDong .ye2{
+    position: absolute;
+    top: 120px;
+    left: 20px;
+
+}
+.zi{
+    margin-top: 20px;
+}
+.zi h2{
+    margin-left: 50px;
+    float: left;
+    color: #F8F8FF;
+}
+.zi span{
+    margin-left: 1300px;
+    color: #999AAA;
+
+}
+.zi span:hover{
+    color: #FC5531;
+}
+.meiRu{
+    width: 2000px;
+    margin-top: 20px;
+}
+
+.meiRu li{
+    width: 280px;
+    height: 200px;
+    background-color: white;
+    margin-left: 20px;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px black;
+    transition: 0.3s;
+    position: relative;
+}
+.meiRu li:hover{
+    margin-top: -5px;
+    box-shadow: 10px 5px 20px 10px black;
+}
+.meiRu li img{
+    width: 280px;
+    height: 140px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.meiRu li .yuan{
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: #2196F3;
+    position: absolute;
+    top: 152px;
+    left: 10px;
+}
+.meiRu li div{
+    width: 100px;
+    height: 20px;
+    margin-left: 20px;
+    color: #999AAA;
+    font-size: 12px;
+}
+.meiRu li p{
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 10px;
+    float: left;
+
+}
+.meiRu li a{
+    display: block;
+    width: 150px;
+    height: 30px;
+    /*display: block;*/
+    text-decoration: none;
+    color: #F8F8FF;
+    background-color: #323A46;
+    margin-left: 120px;
+    text-align: center;
+}
+.meiRu li a:hover{
+    color: #2196F3;
+    background-color: #2B2B2B;
+}
+.disanye{
+    width: 100%;
+    height: 20px;
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+}
+.disanye span{
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #999AAA;
+}
+.disanye span:nth-child(1){
+    font-size: 35px;
+    margin-top: -10px;
+    color: #FC5531;
+}
+.faXua{
+    width: 100%;
+    height: 1800px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.faXua li{
+    width: 500px;
+    height: 150px;
+    margin-left: 20px;
+    border: 1px solid red;
+
+}
+
+
+
+
+
+
+
+
