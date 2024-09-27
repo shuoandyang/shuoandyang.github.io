@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.daoHan{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.daoHan h1{
+    width: 200px;
+    height: 50px;
+}
+.daoHan input{
+    width: 25rem;
+    height: 44px;
+    margin-right: 20px;
+    box-shadow: 0 0 20px 0 #999AAA;
+    font-size: 20px;
+    font-weight: 400;
+    color: #999AAA;
+    border-radius: 5px;
+    border: none;
+    outline:none;
+    text-indent: 1em;
+}
+.shouYe{
+    width: 100%;
+    height: 40px;
+    background-color: #96B97D;
+}
+.shouYe button{
+    width: 50px;
+    height: 40px;
+    color: white;
+
+    font-size: 18px;
+
+    margin-right: 10px  ;
+    outline: none;
+    background:none;
+    border: none;
+}
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-top: 40px;
+}
+.zuoHeZi{
+    width: 20%;
+    height: 500px;
+    /*background-color: #2196F3;*/
+    display: flex;
+    justify-content: flex-end;
+
+}
+.zuoBiaHeZi{
+    width: 12rem;
+    height: 800px;
+
+    margin-top: 10px;
+    border: 1px solid #999AAA;
+    float: left;
+}
+.zuoBiaHeZi li{
+    width: 12rem;
+    height: 45px;
+    border: 1px solid #999AAA;
+
+    background-color: white;
+}
+.zuoBiaHeZi li:nth-child(1){
+    background-color: #999AAA;
+}
+.zuoBiaHeZi li a{
+    box-sizing: border-box;
+    display: block;
+    line-height: 40px;
+    margin-left: 10px;
+
+}
+.zuoBiaHeZi li a img{
+    width: 20px;
+
+}
+/*box*/
+.box .youHeZi{
+
+    width: 1100px;
+    height: 2000px;
+    background-color: white;
+    display: flex;
+    justify-content: left;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+}
+/*ul*/
+.box .youHeZi>ul{
+    width: 99%;
+    height: 600px;
+    /*background-color: red;*/
+
+}
+.box .youHeZi .youBiaHeZi li:nth-child(1){
+    width: 99%;
+    height: 50px;
+    border-bottom: 1px solid #999AAA;
+    line-height: 50px;
+    padding-left: 10px;
+    background: none;
+}
+.box .youHeZi .youBiaHeZi li{
+    width: 300px;
+    height: 100px;
+    margin: 10px 10px;
+    background-color: #bbb;
+    float: left;
+    text-align: left;
+    line-height: 50px;
+}
+.box .youHeZi .youBiaHeZi li a{
+    text-decoration: none;
+}
+.box .youHeZi .youBiaHeZi li h4{
+    color: green;
+    margin-left: 15px;
+}
+.box .youHeZi .youBiaHeZi li img{
+    margin-left: 22px;
+    float: left;
+}
+.box .youHeZi .youBiaHeZi li span{
+    display: block;
+    /*width: 200px;*/
+    /*height: 50px;*/
+    /*background-color: #FC5531;*/
+    color: #999AAA;
+    font-size: 15px;
+    margin-left: 60px;
+    margin-top: -16px;
+}
+
+
+/*手机尺寸*/
+@media  screen and (min-device-width: 0px) and (max-device-width:360px){
+    .daoHan{
+        display: none;
+    }
+    .shouYe{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .shouYe{
+        height: 50px;
+    }
+    .shouYe img{
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        background-color: #999AAA;
+    }
+
+    .shouYe button{
+        display: none;
+    }
+    .box .zuoHeZi{
+        position: absolute;
+        top: -10px;
+        margin-left: -80px;
+        /*display: none;*/
+        transition: 0.5s;
+
+    }
+    .box .zuoBiaHeZi{
+        /*display: none;*/
+    }
+    .box .youHeZi>ul{
+        height: 1200px;
+    }
+    .box .shuJiHeZiDe{
+        width: 200px;
+        height: 800px;
+        position: absolute;
+        /*background-color: #FC5531;*/
+        top: -10px;
+        left: 189px;
+        opacity: 0.1;
+        display: none;
+    }
+
+
+}
+/*平板尺寸*/
+@media  screen and (min-device-width: 361px) and (max-device-width:1024px){
+    .daoHan h1{
+
+    }
+    .shouYe{
+
+    }
+    .shouYe img{
+        display: none;
+    }
+    .box .youHeZi>ul{
+        width: 70%;
+        height: 800px;
+        /*background-color: black;*/
+
+    }
+    .box .youHeZi .youBiaHeZi li:nth-child(1){
+        width: 60%;
+        background-color: #96B97D;
+    }
+    .box .youHeZi{
+        margin-left: 50px;
+    }
+
+
+
+}
+/*显示器尺寸*/
+@media  screen and (min-device-width: 1025px) and (max-device-width:1920px){
+    .daoHan h1{
+        margin-left: 10%;
+    }
+    .shouYe{
+        padding-left:  10%;
+    }
+    .shouYe img{
+        display: none;
+    }
+    .zuoBiaHeZi{
+        margin-left:  10%;
+    }
+    .box{
+
+    }
+    .box .youHeZi{
+        margin-left: 50px;
+    }
+    .zuoHeZi{
+        width: 20%;
+        /*height: 500px;*/
+        /*!*background-color: #2196F3;*!*/
+        /*display: flex;*/
+        /*justify-content: flex-end;*/
+    }
+
+
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/zuopin01.css">
+
+</head>
+<body style="background-color: #F5F5F5">
+<div class="daoHan">
+    <h1>欢迎!!</h1>
+    <input type="text" placeholder="请输入您要搜索的内容">
+</div>
+
+<div class="shouYe" >
+
+    <img  id="tuBiaDe" src="img/tubiao.png">
+    <button>首页</button>
+    <button>首页</button>
+    <button>首页</button>
+    <button>首页</button>
+    <button>首页</button>
+    <button>首页</button>
+</div>
+<!--手机端页面的三条-->
+
+
+<!--手机端页面的三条-->
+<div class="box">
+    <div class="zuoHeZi">
+        <ul class="zuoBiaHeZi" id="shouYe">
+            <li>
+                <a>
+                    <img  src="img/fenXiao.png">
+                    <span>全部教程</span>
+                </a>
+
+
+            </li>
+            <li>
+
+                <a>
+                    <img src="img/fenXiao.png">
+                    <span>HTML/CSS</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="img/fenXiao.png">
+                    <span>Java</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="img/fenXiao.png">
+                    <span>MYSQl</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="img/fenXiao.png">
+                    <span>Vue</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="img/fenXiao.png">
+                    <span>C#</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="img/fenXiao.png">
+                    <span>C++</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="img/fenXiao.png">
+                    <span>HTML/CSS</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="img/fenXiao.png">
+                    <span>HTML/CSS</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="img/fenXiao.png">
+                    <span>HTML/CSS</span>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="img/fenXiao.png">
+                    <span>HTML/CSS</span>
+                </a>
+
+
+            </li>
+
+        </ul>
+    </div>
+    <div class="shuJiHeZiDe"></div>
+    <div class="youHeZi">
+        <ul class="youBiaHeZi">
+
+
+            <li> HTML/CSS</li>
+            <li>
+                <a href="https://shuoandyang.github.io/">
+                <h4>【HTML基本标签】</h4>
+                <img src="img/HTML.png">
+                <span>HTML，即超文本标记语言</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://shuoandyang.github.io/">
+                <h4>【HTML作品】</h4>
+                <img src="img/HTML.png">
+                <span>HTML，即超文本标记语言</span>
+                </a>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+            <li></li>
+            <li></li>
+
+
+        </ul>
+        <ul class="youBiaHeZi">
+
+
+            <li> java</li>
+            <li>
+
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+
+        </ul>
+        <ul class="youBiaHeZi">
+
+
+            <li> MySql</li>
+            <li>
+
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+
+        </ul>
+
+        <ul class="youBiaHeZi">
+
+
+            <li> Vue</li>
+            <li>
+
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+
+        </ul>
+        <ul class="youBiaHeZi">
+
+
+            <li> C#</li>
+            <li>
+
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+
+        </ul>
+        <ul class="youBiaHeZi">
+
+
+            <li> C++</li>
+            <li>
+
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+
+        </ul>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    let a = document.getElementById('shouYe').getElementsByTagName('li');
+    let b = document.getElementsByClassName('youBiaHeZi');
+    for (let i=1;i<a.length;i++){
+
+        a[i].index = i;
+        a[i].onclick = function (){
+
+            for (let m=0;m<b.length;m++){
+                b[m].style.display='none';
+            }
+            b[this.index-1].style.display = 'block';
+            shuJiHeZiDe[0].onclick();
+        }
+
+    }
+    let tuBiaDe = document.getElementById('tuBiaDe');
+    let shuJiZuo = document.getElementsByClassName('zuoHeZi');
+    let shuJiHeZiDe = document.getElementsByClassName('shuJiHeZiDe')
+
+    tuBiaDe.onclick = function (){
+        tuBiaDe.style.transform = 'rotate(90deg)';
+        shuJiZuo[0].style.marginLeft = '130' + 'px';
+        shuJiHeZiDe[0].style.display = 'block'
+
+    }
+    shuJiHeZiDe[0].onclick = function (){
+        tuBiaDe.style.transform = 'rotate(0deg)';
+        shuJiZuo[0].style.marginLeft = '-80' + 'px';
+        this.style.display = 'none';
+
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
