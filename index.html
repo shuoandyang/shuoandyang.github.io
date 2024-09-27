@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title>快捷网</title>
+		<link rel="shortcut icon" href="img/to.jpg">
+
+		<style type="text/css">
+
+			*{
+				margin: 0;
+				padding: 0;
+				list-style:none;
+			}
+			body{
+				background-image: url("img/jpghi.jpg");
+				background-repeat: no-repeat;
+				background-size: cover; /* 背景图片覆盖整个元素 */
+				background-position: center; /* 背景图片居中 */
+				height: 100vh; /* 设置元素高度为视口高度 */
+				width: 100%; /* 设置元素宽度为100% */
+
+			}
+			#sz{
+				width: 520px;
+				height: 50px;
+				margin: 0 auto;
+				font-size: 10px;
+				text-align: center;
+			}
+			#sz input{
+				width: 100px;
+				height: 50px;
+
+
+			}
+
+			.to{
+				display: flex;
+				justify-content: center;
+				margin-top: 50px;
+
+			}
+			.to .ss{
+				border-radius:60px;
+				border: #999AAA 2px solid;
+				text-indent: 2em;
+				font-size: 25px;
+				outline: none;
+				box-shadow: 10px 10px 20px 0px black;
+
+			}
+			.to .tt{
+				width: 100px;
+				height:54px;
+				border-radius: 20px;
+				position: relative;
+				top: 0px;
+				margin-left: -100px;
+				font-size: 25px;
+				border: #999AAA 2px solid;
+			}
+			.to .tt:hover{
+				color: blueviolet;
+
+			}
+			/* 主题 */
+			.box{
+				 /*background-color: #00F5FF;*/
+			}
+			.box>div{
+				display: flex;
+				justify-content: center;
+			}
+			.box button{
+				width: 100px;
+				height: 50px;
+				background-color: white;
+				margin-right: 10px;
+				border-radius: 10px;
+				transition: 0.5s;
+				font-size: 18px;
+				border: none;
+				color: black;
+			}
+			.box ul{
+				display: flex;
+				justify-content: center;
+				flex-wrap:wrap;
+			}
+			.box ul li{
+				width: 500px;
+				height: 120px;
+				float: left;
+				margin-left: 40px;
+				margin-top: 100px;
+				background-color: white;
+				border-radius: 20px;
+				transition: 0.5s;
+				
+			}
+			.box ul li:hover{
+				box-shadow: 5px 5px 20px 5px black;
+			}
+			.box ul li div img{
+				width: 80px;
+				height: 80px;
+				margin-top: 20px;
+				margin-left: 20px;
+				float: left;
+
+			}
+			.box ul li h2{
+				color: black;
+				margin-left: 120px;
+			}
+			.box ul li p{
+				margin-left: 120px;
+				color: #999AAA;
+			}
+			.box ul li div p:nth-child(5){
+				margin-left: 380px;
+				width: 100px;
+				height: 30px;
+				color: #eeeeee;
+				text-align: center;
+				border-radius: 20px;
+				background-color: red;
+				line-height: 30px;
+				transition: 0.5s;
+			}
+			.box ul li div p:nth-child(5):hover{
+				margin-top: -5px;
+				color: #2196F3;
+			}
+			.box ul li a{
+				text-decoration: none;
+			}
+			
+			/* 倒计时 */
+			
+			
+			#demo{
+				width: 450px;
+				height: 80px;
+				background-color: black;
+				font-size: 30px;
+				color: #FF0000;
+				margin: 0 auto;
+				text-align: center;
+				
+			}
+			.wenZi_to{
+				font-size: 25px;
+			}
+			.jingXuan{
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			.jingXuan img{
+				width: 50px;
+				height: 50px;
+			}
+			.jingXuan li{
+				text-align: center;
+				transition: 0.5s;
+
+			}
+			.jingXuan li:hover{
+				margin-top: -5px;
+			}
+			.jingXuan li a{
+				display: block;
+				border-radius: 20px;
+				text-decoration: none;
+				color: black;
+				font-weight: 500;
+
+			}
+			@media  screen and (min-device-width: 390px) and (max-device-width:1900px){
+
+				.to .ss{
+					width: 800px;
+					height: 50px;
+				}
+				.jingXuan {
+					width: 1200px;
+					height: 100px;
+					margin: 50px 220px ;
+				}
+				.jingXuan li{
+					margin-right: 70px;
+				}
+				.jingXuan li a{
+					width: 100px;
+					height: 100px;
+					box-shadow: 0px 0px 10px 10px #999AAA;
+				}
+				.box{
+					width: 1200px;
+					height: 2000px;
+					margin: 15px auto;
+					padding-top: 40px;
+				}
+				.box .xialafenlei{
+					display: none;
+				}
+
+				.to .tt{
+					margin-left: -100px;
+
+				}
+
+
+			}
+			@media  screen and (min-device-width: 0px) and (max-device-width:380px){
+				.wenzito{
+					display: none;
+				}
+				#sz{
+					display: none;
+				}
+
+
+				.to{
+					display: flex;
+					justify-content: center;
+
+				}
+				.to .ss{
+					width: 300px;
+					height: 50px;
+					font-size: 15px;
+				}
+				.to .tt{
+					width: 60px;
+					margin-left: -60px;
+
+				}
+				.jingXuan{
+					width: 380px;
+					height: 300px;
+					margin-top: 50px;
+					justify-content: left;
+				}
+				.jingXuan li{
+					margin-bottom: 20px;
+					margin-left: 50px;
+				}
+				.jingXuan li a{
+					width: 200px;
+					height: 100px;
+					box-shadow: 0px 0 10px 10px black;
+				}
+				.box .pcde{
+					display: none;
+
+				}
+				.xialafenlei{
+					margin-top: 450px;
+					margin-left: 20px;
+
+				}
+				.box .xialafenlei .button{
+					color: #999AAA;
+				}
+				.box ul li{
+					width: 250px;
+					height: 160px;
+					float: left;
+					margin-left: 40px;
+					margin-top: 10px;
+					position: relative;
+				}
+				.box ul li div p:nth-child(5){
+					width: 100px;
+					height: 30px;
+					margin-left: 0;
+					position: absolute;
+					top: 110px;
+					left: 10px;
+
+				}
+
+			}
+
+		</style>
+	</head>
+	<body id="bod" style="background-color: #f1f5f9" >
+			<div class="bjtp">
+		<!-- 倒计时 -->
+			<div class="wenzito">
+				<p id="demo"></p>
+				<span	 class="wenZi_to">看！这里有三个太阳       -------鲁迅</span>
+				<span	 class="wenZi_to">他说你是八九点的太阳       -------鲁迅</span>
+				<span	 class="wenZi_to">忠言逆耳       -------本人法海</span>
+				<span	 class="wenZi_to">通过现象看本质       -------吾</span>
+				<span	 class="wenZi_to">天命如此，吾敢抗天       -------吾</span>
+				<span	 class="wenZi_to">理论是理论，现实才是现实       -------吾</span>
+				<span	 class="wenZi_to">6成把握，即可下手       -------吾</span>
+				<span	 class="wenZi_to">机会是留给准备的人的       -------吾</span>
+			</div>
+
+
+			<div id="sz">
+				<input style="background-color: white;" type="button" value="白色" onclick="color('white')"/>
+				<input style="background-color: red;"   type="button" value="红色" onclick="color('red')" />
+				<input style="background-color: green;" type="button" value="绿色" onclick="color('green')"/>
+				<input style="background-color: blue;" type="button" value="蓝色"  onclick="color('blue')"/>
+				<input style="background-color: fuchsia;" type="button" value="粉色"  onclick="color('fuchsia')"/>
+
+			</div>
+
+				<form class="to" target="_blank" method="get" action="https://cn.bing.com/" >
+					<label>
+						<input class="ss" type="text"  placeholder="今天想要了解什么呢~(*＞◡❛)♡" name="q" class="text" />
+					</label>
+					<input class="tt" type="submit"  value="搜索！" class="search">
+				</form>
+
+
+				<ul class="jingXuan">
+					<li>
+						<a href="https://www.bilibili.com/" target="_blank"	>
+							<div>
+								<img src="img/blbl.png"  title="一个非常好的短视频网站"  alt="图片被外星人劫走了"><br>
+								哔哩哔哩
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="xm.html" target="_blank">
+							<div>
+								<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+								博客作品
+
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.wenshushu.cn/" target="_blank">
+							<div>
+								<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+								文叔叔
+
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="shangcheng.html" target="_blank">
+							<div>
+								<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+								游戏商城
+
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/" target="_blank"	>
+							<div>
+								<img src="img/blbl.png"  title="一个非常好的短视频网站"  alt="图片被外星人劫走了"><br>
+								github
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="zuopin/zuopin01.html" target="_blank"	>
+							<div>
+								<img src="img/blbl.png" title="一个非常好的短视频网站"  alt="图片被外星人劫走了"><br>
+								学习笔记
+							</div>
+						</a>
+					</li>
+
+				</ul>
+				
+				
+			<div class="box">
+				<div class="pcde">
+					<button onclick="fenlei('fen',0)">显示全部</button>
+					<button onclick="fenlei('ailei',1)">Ai类</button>
+					<button onclick="fenlei('youxilei',2)">游戏类</button>
+					<button onclick="fenlei('xuexilei',3)">学习类</button>
+					<button onclick="fenlei('rjian',4)">软件类</button>
+					<button onclick="fenlei('moren',5)">默认类</button>
+				</div>
+
+				<div class="xialafenlei" >
+					<button onclick="fenlei('fen')">显示全部</button>
+					<button onclick="fenlei('ailei')">Ai类</button>
+					<button onclick="fenlei('youxilei')">游戏类</button>
+					<button onclick="fenlei('xuexilei')">学习类</button>
+					<button onclick="fenlei('moren')">默认类</button>
+
+				</div>
+
+
+
+
+			<ul>
+			
+				<li class="fen xuexilei">
+					<a href="https://www.bilibili.com/" target="_blank"	>
+					<div>
+					<img src="img/blbl.png"  title="一个非常好的短视频网站"  alt="图片被外星人劫走了"><br>
+						<h2>哔哩哔哩</h2>
+						<p>一个教学质量非常好的短视频软件</p>
+						<p>点击进入</p>
+					</div>
+					</a>
+				</li>
+
+				<li class="fen xuexilei">
+					<a href="https://iconpark.oceanengine.com/official" target="_blank">
+						<div>
+							<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>前端设计图标源码</h2>
+							<p>提供了各种图标的源码</p>
+							<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+
+				<li class="fen xuexilei">
+					<a href="https://wallpaperscraft.com/catalog/anime" target="_blank">
+					<div>
+					<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+						<h2>壁纸网站</h2>
+						<p>资料</p>
+						<p>点击进入</p>
+					</div>
+					</a>
+				</li>
+
+				<li class="fen xuexilei">
+					<a href="https://ywyj.cn/" target="_blank">
+						<div>
+							<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+								<h2>一网一匠</h2>
+								<p>资料</p>
+								<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+
+				<li class="fen youxilei">
+					<a href="https://www.xianyudanji.net/" target="_blank">
+						<div>
+							<img src="img/xydj.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>闲鱼单机</h2>
+							<p>可以白嫖盗版游戏下载的网站</p>
+							<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+
+				<li class="fen youxilei">
+					<a href="https://www.3dmgame.com" target="_blank">
+						<div>
+							<img src="img/3dmh.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>3Dm官网</h2>
+							<p>可以下载单机游戏的修改器</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li class="fen xuexilei">
+					<a href="https://github.com/" target="_blank">
+						<div>
+							<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>github</h2>
+							<p>开源程序非常强大的网站</p>
+							<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+
+				<li class="fen xuexilei">
+					<a href="https://www.iconfont.cn/illustrations/index?spm=a313x.search_index.i3.7.21663a81D1UGAJ" target="_blank">
+						<div>
+							<img src="img/1.svg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>阿里云图标</h2>
+							<p>登录||设计好的图标</p>
+							<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+				
+
+			
+			<!-- 第二排 -->
+
+
+				<li class="fen xuexilei">
+					<a href="https://zz.ke.com/?utm_source=biying&utm_medium=pinzhuan&utm_term=biaoti&utm_content=biaotimiaoshu&utm_campaign=wymoren" target="_blank"	>
+						<div>
+							<img src="img/zf.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>贝壳</h2>
+							<p>可以租房子</p>
+							<p>点击进入</p>
+						</div>
+					</a>
+				</li>
+
+
+
+
+				<li class="fen xuexilei">
+					<a href="https://www.yunedit.com/createcert" target="_blank">
+						<div>
+							<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+								<h2>前端免费证书</h2>
+								<p>手机软件免费证书</p>
+								<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+				
+				<li class="fen ailei">
+					<a href="https://design.meijian.com/mj-box/ai-pic-matting-intro?utm_source=ywyjkt&utm_source=xinquji/" target="_blank">
+					<div>
+					<img src="img/2.svg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+						<h2>Ai抠图</h2>
+						<p>登录||可以一键扣出人物，去除背景</p>
+						<p>点击进入</p>
+					
+					</div>
+					</a>
+				</li>
+				
+
+			
+			<!-- 第三排 -->
+			
+
+				<li class="fen ailei">
+					<a href="https://jpghi.com/?utm_source=xinquji/" target="_blank">
+						<div>
+							<img src="img/ma"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>Ai修图去除马赛克</h2>
+							<p>免费||可以把模糊的图片复原</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li class="fen ailei">
+					<a href="https://jpgrm.com/?utm_source=xinquji" target="_blank">
+						<div>
+							<img src="img/xiangpi"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>Ai去除图片如何元素</h2>
+							<p>可以为您去除图片上的如何元素</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li class="fen youxilei">
+					<a href="shangcheng.html" target="_blank">
+						<div>
+							<img src="img/blbl.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+								<h2>游戏商城</h2>
+								<p>免费||下载任何单机游戏</p>
+								<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+				
+
+
+				<li class="fen ailei">
+					<a href="https://chatgai.lovepor.cn/" target="_blank">
+						<div>
+							<img src="img/chat.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>AIchatGPT</h2>
+							<p>免费||可以问所有事情的AI</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li class="fen xuexilei">
+					<a href="https://www.tboxn.com/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>导航网</h2>
+							<p>一个比我强大的导航网游戏东西收费</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+				
+
+				
+
+			
+			<!-- 第四排 -->
+
+
+
+				<li class="fen ailei">
+					<a href="https://tool.browser.qq.com/id_photo.html?ref=www.tboxn.com" target="_blank">
+						<div>
+							<img src="img/zhengjianz.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>AI证件照</h2>
+							<p>一键即可完成您的证件照工具</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li class="fen xuexilei">
+					<a href="https://objtube.github.io/front-end-roadmap/?ref=www.tboxn.com#/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>前端学习路线</h2>
+							<p>学习不迷请点个关注</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li class="fen rjian">
+					<a href="download/sip.zip" target="_blank">
+						<div>
+							<img src="img/jietu.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>强大的截图软件</h2>
+							<p>pc软件||免费||可以截取屏幕然后置顶展示</p>
+							<p>点击下载</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li class="fen rjian">
+					<a href="download/geek.7z" target="_blank">
+						<div>
+							<img src="img/geek.png"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>强大的卸载软件</h2>
+							<p>pc软件||免费||可以为您清理掉干净流氓软件</p>
+							<p>点击下载</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li class="fen moren">
+					<a href="https://www.wenshushu.cn/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>默认</h2>
+							<p>默认</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+
+				<li class="fen moren">
+					<a href="https://www.wenshushu.cn/" target="_blank">
+						<div>
+							<img src="img/wenshushu.jpg"  title="点我快点6的"  alt="图片被外星人劫走了"><br>
+							<h2>默认</h2>
+							<p>默认</p>
+							<p>点击进入</p>
+
+						</div>
+					</a>
+				</li>
+				
+			</ul>
+			</div>
+	</div>
+	</body>
+	<script type="text/javascript">
+		function color(x){
+			document.body.style.backgroundColor = x;
+		}
+
+		//倒计时：
+		var demo=document.getElementById("demo");
+		var endTime=new Date("2025/2/1 22:35:0");
+		// 声明目标时间
+		 setInterval(clock,1000);
+		function clock(){
+			
+			var nowTime=new Date();
+			// 声明现在的时间
+			// console.log(nowTime.getTime());// 1724590896086
+			
+		//(目标时间-现在时间)/1000是要把毫秒排除掉
+		var second=parseInt((endTime.getTime()-nowTime.getTime())/1000);
+		// console.log(second);
+		
+//方法 . getTime 输出的是当前的是秒数 精确到毫秒13748545 后5位毫秒  /1000是要把毫秒排除掉
+		
+		//现在的second是倒计时秒数
+		//second/3600是剩余的小时，除24是不是1天
+		//一个小时=3600秒
+		// 一分钟 = 60秒
+//得到天
+		var d=parseInt(second/3600/24);
+			// console.log(d);
+		
+//得到小时	
+		//%返回的 值是当前的 余数  13748545 除于3600 除于24 取他的商的余数值
+		var h=parseInt(second/3600%24);
+		// console.log(h);	
+		
+//得到分钟		
+		//得到分 4200/60=70分  转换:1小时10分钟
+		var m=parseInt(second/60%60)
+		// console.log(m);
+		
+//得到秒数	
+		var s=parseInt(second%60)
+		// console.log(s)
+		
+		d<10?d="0"+d:d;
+		h<10?d="0"+d:h;
+		m<10?d="0"+d:m;
+		s<10?d="0"+d:s;
+		demo.innerHTML="毕业:"+d+"天"+h+"小时"+m+"分"+s+"秒";
+		}
+
+		let pcde = document.getElementsByTagName('button');
+		for (var l=0;l<pcde.length-5;l++){
+			var chuShuZhi = 0
+			pcde[l].index = l;
+			pcde[chuShuZhi].style.background = 'black';
+			pcde[chuShuZhi].style.color = 'white';
+
+			pcde[l].onmouseover = function () {
+				pcde[this.index].style.background = 'black';
+				pcde[this.index].style.color = 'white';
+			}
+			pcde[l].onmouseleave = function () {
+				for (var pd=0;pd<pcde.length;pd++){
+
+					pcde[pd].style.background = 'white';
+					pcde[pd].style.color = 'black';
+					pcde[chuShuZhi].style.background = 'black';
+					pcde[chuShuZhi].style.color = 'white';
+				}
+			}
+
+
+		}
+		// indexOf() 方法返回值在字符串中第一次出现的位置。
+
+		// 如果未找到该值，则 indexOf() 方法返回 -1。
+		function fenlei(x,y){
+			var fenbiao = document.getElementsByClassName("fen");
+
+			console.log(y);
+
+			for (let i = 0; i < fenbiao.length; i++) {
+				console.log(fenbiao[i].className.indexOf(x));
+				fenbiao[i].style.display = fenbiao[i].className.indexOf(x) >-1 ? 'block':'none';
+
+			}
+			for (let k=0;k<pcde.length;k++){
+				pcde[k].style.background='white';
+			}
+			pcde[y].style.background = 'black'
+			pcde[y].style.color = '#999AAA';
+			if (!(y==chuShuZhi)){
+				chuShuZhi=y;
+			}
+		}
+		wenZi();
+		setInterval(wenZi,4000)
+		function wenZi(){
+			let a = document.getElementsByClassName("wenZi_to");
+
+			let suiJiShu = parseInt(Math.random()*(a.length-1)+1);
+			// console.log(suiJiShu)
+			// console.log(a.length);
+			for (let i = 0; i < a.length; i++) {
+				a[i].style.display = 'none';
+			}
+			a[suiJiShu].style.display = 'block';
+			a[suiJiShu].style.marginLeft = '35%';
+		}
+	</script>
+</html>
