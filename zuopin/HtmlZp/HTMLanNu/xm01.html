@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--
+笔记：
+inset: -5px;
+    1.inset: 10px 20px;
+    /* 等同于 */
+    top: 10px;
+    right: 20px;
+    bottom: 10px;
+    left: 20px;
+    2.filter: blur(30px); 模糊
+    3. background-size: 400%;背景长度扩展
+
+-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 80%;
+            height: 400px;
+            background-color: black;
+            margin-left: auto;
+            margin-top: 20%;
+
+        }
+        .zha_anNu{
+            width: 200px;
+            height: 60px;
+            border-radius: 30px;
+            border: none;
+            background-image: linear-gradient( 90deg, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+            font-weight: 800;
+            color: white;
+            font-size: 22px;
+            background-size: 400%;
+            /*背景长度放大400倍*/
+            position: relative;
+        }
+        .zha_anNu::before{
+            content: "";
+            position: absolute;
+            inset: -5px;
+            /*各个方向-5px*/
+            top: 0;
+            left: 0;
+            background-image: linear-gradient( 90deg, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+            border-radius: 40px;
+            background-size: 400%;
+            z-index: -1;
+        }
+        .zha_anNu:hover::before{
+            filter: blur(30px);
+            /*模糊*/
+            animation: zha_annuDong 5s linear infinite;
+        }
+        .zha_anNu:hover{
+            animation: zha_annuDong 5s linear infinite;
+        }
+        @keyframes zha_annuDong {
+            /*过渡的是背景长度的变化*/
+            from{
+                background-position: 0;
+            }
+            to{
+                background-position: 400%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <button CLASS="zha_anNu">BUTTON</button>
+</body>
+</html>
