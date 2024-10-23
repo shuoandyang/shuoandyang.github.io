@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        span{
+            position: absolute;
+            opacity: 0;
+            animation: ok 5s infinite linear,
+                        top 5s infinite linear,
+                        op 5s linear infinite,
+                        da 5s linear infinite;
+        }
+        @keyframes ok {
+            0%{
+                transform: rotate(0deg);
+            }
+
+            60%{
+                transform: rotate(300deg);
+            }
+            85%{
+                transform: rotate(600deg);
+            }
+            100%{
+                transform: rotate(700deg);
+            }
+        }
+        @keyframes top {
+            0%{
+              /*top: 0;*/
+            }
+            100%{
+                top: 70%;
+            }
+
+        }
+        @keyframes op {
+            0%,70%{opacity: 1}
+            100%{opacity: 0}
+        }
+        @keyframes da {
+            0% {
+                width: 0;
+                height: 0;
+            }
+            100%{
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+
+
+
+
+    /*    复制部分*/
+        #m{
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            margin: 0 auto;
+            border-radius: 10px;
+            background-color: #2196F3;
+        }
+        #m:hover{
+            background-color: orangered;
+            color: #eeeeee;
+        }
+    </style>
+</head>
+<body>
+<span></span>
+
+<h2 id="m">复制源码</h2>
+
+<script type="text/javascript">
+    setInterval(span,200)
+    function span(){
+        // 生成随机宽高
+        let w = Math.random()*(70)+30 + 'px';
+        // 生成随机上边距
+        let top = Math.random()*100 + 'vh';
+        // 生成随机左边距
+        let  left = Math.random()*90 + "vw";
+        //生成16进制随机颜色
+        let color = "#" + Math.floor(Math.random()*16777215).toString(16);
+        //添加一共div
+        let divFang = document.createElement('span');
+        divFang.classList.add('divFang');
+     // 对象 属性      方法
+
+        //定义css变量
+        divFang.style.setProperty('--size',w);
+        divFang.style.setProperty('--top',top);
+        divFang.style.setProperty('--left',left);
+        divFang.style.setProperty('--color',color);
+
+        //定义css的样式
+        divFang.style.top = top
+        divFang.style.left = left
+        divFang.style.background = color
+        divFang.style.width = w
+        divFang.style.height = w
+
+        //在页面添加div
+        document.body.appendChild(divFang);
+
+    //   删除一下方框
+        setTimeout( ()=>{
+            document.body.removeChild(divFang)
+        },4500 )
+    }
+
+
+
+    //复制
+
+    let m = document.getElementById("m")
+    m.onclick = function (){
+        this.innerText = "复制成功了！！";
+        let html = document.documentElement.outerHTML;
+        navigator.clipboard.writeText(html);
+    }
+
+
+
+</script>
+</body>
+</html>
