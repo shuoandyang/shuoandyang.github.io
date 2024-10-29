@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        /*
+        注意看完使用会更好用哦 只需要改2个大小即可
+
+        大小：更改root的
+            width: var(--shiKoKu);
+            height: var(--shikoGao);
+        添加内容：
+            <div class="zha_box2" id="box2"> :添加图片
+            <ul class="zha_annu" id="zha_annu"> :对应的li的value值按钮顺序填一下即可完成
+        位置更改：
+            .zha_box {}
+
+
+        js已经写好不用更改会自动获取顺序的
+            如果你自己想尝试写一个一样的 注意自己的js代码顺序哦，不然你会发现跟我写的差那么一点点完美
+
+        */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        :root{
+            --shiKoKu:1200px;
+            --shikoGao:460px;
+
+            --zi-corlor: #b0b0b0;
+        }
+    /*盒子位置*/
+        .zha_box {
+            width: var(--shiKoKu);
+            height: var(--shikoGao);
+
+            position: relative;
+            margin: 0 150px;
+
+        }
+    /*图片样式*/
+        .zha_box .zha_box2 img{
+            width: var(--shiKoKu);
+            height: var(--shikoGao);
+
+            position: absolute;
+
+            opacity: 0;
+            transition: 1s all;
+        }
+        .zha_box .zha_box2 img.op{
+            opacity: 1;
+        }
+    /*按钮位置*/
+        .zha_box .zha_annu{
+            width: 200px;
+            height: 40px;
+            position: absolute;
+            top: 92%;
+            right: 0;
+        }
+        /*按钮样式*/
+        .zha_box .zha_annu li{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid var(--zi-corlor);
+
+            margin-left: 10px;
+            float: left;
+        }
+    /*左右拉手*/
+        .zha_box .zha_dianJiKua li{
+            width: 40px;
+            height: 100px;
+            overflow: hidden;
+
+            text-align: center;
+        }
+        /*右边拉手位置*/
+        .zha_box .zha_dianJiKua li:nth-child(1){
+            position: absolute;
+            top: 40%;
+            right:  0;
+        }
+        /*左边拉手位置*/
+        .zha_box .zha_dianJiKua li:nth-child(2){
+            position: absolute;
+            top: 35%;
+            left: 0;
+        }
+        /*右边图片位置*/
+        .zha_box .zha_dianJiKua li .tuPian2{
+            margin-left: -86px;
+        }
+        /*右边图片位置*/
+        .zha_box .zha_dianJiKua li:hover .tuPian2{
+            margin-left: 0;
+        }
+        /*左边图片位置*/
+        .zha_box .zha_dianJiKua li .tuPian1{
+            margin-left: -125px;
+        }
+        /*左边图片位置*/
+        .zha_box .zha_dianJiKua li:hover .tuPian1{
+            margin-left: -42px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="zha_box">
+<!--        图片-->
+        <div class="zha_box2" id="box2">
+
+            <img class="tuPia" src="img/WuFengGunDong01.jpg" alt="">
+            <img class="tuPia" src="img/WuFengGunDong02.jpg" alt="">
+            <img class="tuPia" src="img/WuFengGunDong03.jpg" alt="">
+            <img class="tuPia" src="img/WuFengGunDong04.jpg" alt="">
+            <img class="tuPia" src="img/WuFengGunDong05.jpg" alt="">
+            <img class="tuPia" src="img/WuFengGunDong01.jpg" alt="">
+            <img class="tuPia" src="img/WuFengGunDong02.jpg" alt="">
+
+
+        </div>
+        <!--按钮-->
+        <ul class="zha_annu" id="zha_annu">
+            <li value="0"></li>
+            <li value="1"></li>
+            <li value="2"></li>
+            <li value="3"></li>
+            <li value="4"></li>
+            <li value="5"></li>
+            <li value="6"></li>
+
+        </ul>
+<!--     左右拉手-->
+        <ul class="zha_dianJiKua">
+            <li>
+                <img  class="tuPian1" src="img/zuoyoujianto.png/" alt="">
+            </li>
+            <li>
+                <img class="tuPian2"  src="img/zuoyoujianto.png" alt="">
+            </li>
+        </ul>
+    </div>
+
+<script type="text/javascript" src="../js/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+
+    let chuShi = 0;  //初始图片参数
+    let img = document.getElementById("box2").getElementsByTagName("img");
+    // 计时器控制图片位置
+    setInterval(() => {
+        if (chuShi >= img.length || chuShi<0) {
+            chuShi = 0;
+
+        }
+        qieHuan(chuShi)
+        anNiu(chuShi)
+        chuShi++;
+    }, 5000)
+
+    qieHuan(0)
+
+    //根据参数切换图片
+    function qieHuan(a) {
+        if (a>img.length) a=img.length;
+        for (let i = 0; i < img.length; i++) {
+            img[i].className = " ";
+        }
+        img[a].className = 'op';
+    }
+
+    //四个按钮的
+    let anNiuDom = $("#zha_annu li");
+    //图片位置
+    $(anNiuDom).on('click',function(){
+        chuShi=this.value
+        qieHuan(chuShi)
+        anNiu()
+    })
+    //颜色
+    function anNiu(){
+        //颜色
+        $(anNiuDom).css("background-color"," #b0b0b0")
+        $("#zha_annu li:eq("+chuShi+")").css("background-color","white")
+    }
+    //左右切换
+    //控制左
+    $(".zha_dianJiKua li:eq(1)").click(function (){
+        chuShi--;
+        if (chuShi<0) chuShi=img.length-1;
+        anNiu()
+        qieHuan(chuShi)
+    })
+    //控制右边
+    $(".zha_dianJiKua li:eq(0)").click(function (){
+        chuShi++;
+        if (chuShi>=img.length)chuShi = 0;
+        anNiu()
+        qieHuan(chuShi)
+
+    })
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
