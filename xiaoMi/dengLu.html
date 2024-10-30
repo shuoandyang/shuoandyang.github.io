@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --zi-corlor: #b0b0b0;
+            --rgb-hei: rgb(0,0,0,0.8);
+            --body--bj:#f5f5f5;
+            --bj-or: orangered;
+        }
+        body{
+            background-color: var(--body--bj);
+        }
+        li{
+            list-style: none;
+        }
+        /*大盒子*/
+        .beiJIng{
+            width: 100%;
+
+            display: flex;
+        }
+        /*左边图片*/
+        .beiJIng img{
+            width: 380px;
+            height: 793px;
+        }
+        .beiJIng .youBox{
+            width: 75%;
+            height: 800px;
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /*图片右边盒子*/
+        .beiJIng .youBox ul{
+            width: 100%;
+            height: 80px;
+
+            padding-right: 30px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        /*二盒li*/
+        .beiJIng .youBox ul li{
+            width:32%;
+            height: 80px;
+
+            display: flex;
+            align-items: center;
+        }
+        /*二盒 logo图片*/
+        .beiJIng .youBox ul li img{
+            width: 40px;
+            height: 40px;
+
+            margin-left: 20px;
+        }
+        /*logo图片文字 示例：小米账号*/
+        .beiJIng .youBox ul li span{
+            color: var(--rgb-hei);
+            font-weight: 600;
+            font-size: 25px;
+
+            margin-left: 10px;
+        }
+        /*用户协议的背景*/
+        .beiJIng .youBox ul li dl{
+            width: 100%;
+            height: 40px;
+        }
+        /*用户协议的里面的布局样式*/
+        .beiJIng .youBox ul li dl dd{
+            width: 25%;
+            height: 40px;
+
+
+            color: var(--zi-corlor);
+            text-align: center;
+            font-weight: 600;
+            line-height: 40px;
+            font-size: 14px;
+
+            float: left;
+        }
+        /*用户协议的里面的字体样式*/
+        .beiJIng .youBox ul li dl dd a{
+            text-decoration: none;
+            color: var(--zi-corlor);
+            border-left: 1px solid var(--zi-corlor);
+
+            padding-left: 10px;
+        }
+        /*中间登录框*/
+        .beiJIng .in{
+            width: 450px;
+            height: 560px;
+            box-shadow: 0 0 10px 0 var(--zi-corlor);
+
+            margin-top: -136px;
+            margin-left: 355px;
+
+            overflow: hidden;
+        }
+        /*二维码图片外面的盒子 位置*/
+        .beiJIng .in .erWeiMa{
+            width: 450px;
+            height: 42px;
+
+            display: flex;
+            justify-content: flex-end;
+        }
+        .beiJIng .in .erWeiMa::before{
+            content: "";
+            width: 0;
+            height: 0;
+
+            border-left: 50px solid transparent;
+            border-top: 50px solid whitesmoke;
+            border-right: 50px solid transparent;
+
+            position: relative;
+            top: 20px;
+            left: 67px;
+
+            transform: rotate(44deg);
+
+
+
+        }
+        /*二维码 位置*/
+        .beiJIng .in .erWeiMa .erWeiMaTuP{
+            display: block;
+            width: 60px;
+            height: 60px;
+
+            background-color: rgb(255,69,0,0.3);
+        }
+        /*二维码 样式*/
+        .beiJIng .in .erWeiMa img{
+            width: 42px;
+            height: 42px;
+
+            margin-top: 10px;
+            margin-left: 10px;
+
+        }
+        /*中间登录框内容的背景居中*/
+        .beiJIng .in>div{
+            width: 360px;
+            height: 500px;
+
+            margin-left: 50px;
+        }
+        /*中间登录框内容的第一行布局 */
+        .beiJIng .in>div>p{
+            width: 360px;
+            height: 41px;
+
+        }
+        /*中间登录框内容的第一行布局 字体 登录||注册*/
+        .beiJIng .in>div>p a{
+            display: block;
+            width: 62px;
+            height: 41px;
+
+            text-align: center;
+            line-height: 41px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 22px;
+            color: var(--zi-corlor);
+
+            float: left;
+            position: relative;
+        }
+        /*登录颜色深一点*/
+        .beiJIng .in>div>p a:first-child{
+            color: var(--rgb-hei);
+        }
+        /*在他前面加个横线*/
+        .beiJIng .in>div>p a:first-child::before{
+            content: "";
+            width: 49px;
+            height: 5px;
+            background-color: var(--bj-or);
+            border-radius: 20px;
+
+            position: absolute;
+            top: 38px;
+            left: 6px;
+        }
+        /*登录框*/
+        .beiJIng .in>div>form{
+            width: 354px;
+            height: 310px;
+
+            margin-top: 25px;
+        }
+
+        .beiJIng .in>div>form label{
+            color: var(--zi-corlor);
+            font-size: 18px;
+
+            position: relative;
+            top: -40px;
+            left: 20px;
+
+            transition: 0.3s all;
+
+            z-index: -5;
+        }
+
+        .beiJIng .in>div>form input{
+            width: 354px;
+            height: 60px;
+            background-color: rgb(176,176,176,0.2);
+
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+            text-indent: 20px;
+
+            outline: none;
+
+
+            padding-top: 20px;
+            margin-top: 15px;
+
+        }
+        .beiJIng .in>div>form .zhangHao{
+            display: none;
+
+            color: var(--bj-or);
+            font-size: 12px;
+
+            margin-left: -140px;
+            margin-top: 20px
+        }
+        /*密码框下面的盒子*/
+        .beiJIng .in>div>form .xuanZeKuang{
+            width: 354px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+        }
+        /*密码框下面的盒子的选择框 方框*/
+        .beiJIng .in>div>form .xuanZeKuang input:nth-child(1){
+            width: 20px;
+            height: 20px;
+
+        }
+        /*密码框下面的盒子的选择框 方框后面的文字*/
+        .beiJIng .in>div>form .xuanZeKuang span:nth-child(2){
+            width: 100%;
+            height: 10px;
+
+            color: var(--zi-corlor);
+            font-size: 14px;
+
+            margin-left: 10px;
+
+
+        }
+        .beiJIng .in>div>form .xuanZeKuang span:nth-child(2) a{
+            text-decoration: none;
+            color: var(--rgb-hei);
+        }
+        /*登录框*/
+        .beiJIng .in>div>form input:nth-child(8){
+
+            background-color: rgb(255,69,0,0.3);
+
+            color: var(--body--bj);
+            padding-top: 0;
+
+            margin-bottom: 0;
+        }
+        /*登录框下面的盒子 示例：忘记密码 */
+        .beiJIng .in>div>form>div:nth-child(9){
+            width: 354px;
+            height: 50px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        /*登录框下面的盒子 文字样式*/
+        .beiJIng .in>div>form>div:nth-child(9) span{
+            color: var(--bj-or);
+        }
+        /*忘记密码下面的方框 其他方式登录 p标签方框*/
+        .beiJIng .in>div .qiTaFangShi{
+            width: 354px;
+            height: 40px;
+
+            color: var(--zi-corlor);
+            font-size: 17px;
+            margin-top: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*其他方式登录框下面 ol */
+        .beiJIng .in>div>ol{
+            width: 360px;
+            height: 56px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        /*里面变成 ol li 布局*/
+        .beiJIng .in>div>ol li{
+            width: 42px;
+            height: 42px;
+
+            overflow: hidden;
+
+            border-radius: 50%;
+            margin-right: 20px;
+
+        }
+        /*支付宝 图片样式*/
+        .beiJIng .in>div>ol li img{
+            width: 50px;
+            height: 50px;
+            margin-top: -2px;
+            margin-left: -2px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="beiJIng">
+        <img src="img/dengLu..jpg" alt="">
+        <div class="youBox">
+            <ul>
+                <li>
+                    <img src="img/log.png" alt="">
+                    <span>小米账号</span>
+                </li>
+                <li>
+                <dl>
+                    <dd>用户协议</dd>
+                    <dd>隐私政策</dd>
+                    <dd>帮助中心</dd>
+                    <dd><a href="#">中文（简体）</a> </dd>
+
+                </dl>
+                </li>
+            </ul>
+            <div class="in">
+                <p class="erWeiMa">
+                    <a class="erWeiMaTuP">
+                    <img  src="img/dlErWeiMa.png">
+                    </a>
+
+                </p>
+
+                <div>
+                    <p> <a href="#">登录</a><a href="shebgChengZhuCe.html">注册</a></p>
+
+                    <form>
+
+                        <input type="text" value="" name="user">
+                        <label>    邮箱/手机号码/小米ID</label>
+                        <span class="zhangHao" >请输入账号</span>
+
+                        <input type="password" value="" name="paws">
+                        <label>    密码</label>
+                        <span class="zhangHao" style="margin-left: -30px">请输入密码</span>
+
+                        <div class="xuanZeKuang">
+                            <input type="checkbox" >
+                            <span>已阅读并同意小米账号 <a href="javascript:">用户协议</a> 和 <a href="javascript:">隐私政策</a> </span>
+                        </div>
+
+                        <input type="button" value="登录">
+
+                        <div><span>忘记密码?</span><span>手机号登录</span></div>
+                    </form>
+
+                    <p class="qiTaFangShi">其他方式登录</p>
+                    <ol>
+                        <li>
+                            <img src="img/dlzfb.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/dluWx.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/dlqq.png" alt="">
+                        </li>
+                        <li>
+                            <img src="img/dlwbo.png" alt="">
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.7.1.js"></script>
+
+    <script type="text/javascript">
+
+
+        $(":text").click(function (){
+            $("label:eq(0)").css({
+                "font-size":"14px",
+                "top":"-55px",
+                "color":"red"
+            })
+            $(":text").css({
+                "border":"1px solid orangered",
+                "background-color": "rgb(255,69,0,0.1)",
+                "boxShadow": "0 0 5px 0 orangered"
+
+            })
+            $(".zhangHao:eq(0)").show()
+
+        })
+        $(":password").click(function (){
+            $("label:eq(1)").css({
+                "font-size":"14px",
+                "top":"-55px",
+                "color":"red"
+            })
+            $(":password").css({
+                "border":"1px solid orangered",
+                "background-color": "rgb(255,69,0,0.1)",
+                "boxShadow": "0 0 5px 0 orangered"
+
+            })
+            $(".zhangHao:eq(1)").show()
+
+        })
+
+        $(":button").click(function (){
+            let user = $(":text").val()
+            let paws = $(":password").val()
+            console.log(user)
+            console.log(paws)
+
+
+
+            $.ajax({
+                url:"http://localhost:8080/fwq/Ajax03", //请求的地址
+                type: "get",                              //请求方式
+                data:{"user":user,"paws":paws}   ,          //请求的参数
+                dataType: "json",
+                success:function (a){
+                    console.log(a)
+                    let shuJU = a;
+                    console.log(shuJU)
+                    if (shuJU) {
+                        console.log("进来了")
+                        window.location.href = "index.html";
+                    } else {
+                        alert("账号密码错误")
+                    }
+                },
+                error:function (){                          //请求错误才会执行
+                    alert("请输入正确的账号密码")
+                },
+                contentType:"application/json" ,             //请求参数格式 (表示)
+                async:true
+
+
+            })
+        })
+
+    </script>
+</body>
+</html>

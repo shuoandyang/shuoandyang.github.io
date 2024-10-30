@@ -1,0 +1,947 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bei-color: #333333;
+    --zi-corlor: #b0b0b0;
+    --zi--bai: #FFFFFF;
+    --zi-hei: #333;
+    --zi-or: orangered;
+    --bei--jing-or: #ff6700;
+    --bei-xia-rgb: rgb(176,176,176,0.2);
+    --bei--si-zse:#665e57;
+    --body--bj:#f5f5f5;
+    --liu-wen:#ff6700;
+
+    /*无缝滚动*/
+    --shiKoKu: 1226px;
+    --shikoGao: 460px;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: var(--body--bj);
+}
+
+li {
+    list-style: none;
+}
+/*<!--购物车界面开始-->*/
+/*<!--购物车界面开始-->*/
+.goWuChuJieMian{
+    width: 100%;
+    height: 790px;
+    background-color: rgb(255,255,255,0.85);
+
+    position: fixed;
+    top: 0;
+    left: -5px;
+
+    z-index: 999;
+    display: none;
+
+}
+/*按钮效果开始*/
+
+.zha_anNu{
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient( 90deg, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    font-weight: 800;
+    color: white;
+    font-size: 22px;
+    background-size: 400%;
+    /*背景长度放大400倍*/
+    position: relative;
+    top: 43px;
+    left: 80%;
+
+    animation: zha_annuDong 5s linear infinite;
+
+
+}
+.zha_anNu::before{
+    content: "";
+    position: absolute;
+    inset: -5px;
+    /*各个方向-5px*/
+    top: 0;
+    left: 0;
+    background-image: linear-gradient( 90deg, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    border-radius: 40px;
+    background-size: 400%;
+    z-index: -1;
+
+    filter: blur(30px);
+    animation: zha_annuDong 5s linear infinite;
+}
+@keyframes zha_annuDong {
+    /*过渡的是背景长度的变化*/
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: 400%;
+    }
+}
+h2{
+    width: 200px;
+    height: 50px;
+    margin-top: 100px;
+    text-align: center;
+    background-color: #03a9f4;
+}
+
+/*按钮效果结束*/
+/*表数据*/
+table{
+    margin-left: 150px;
+}
+/*表头*/
+
+.biaoTO{
+    width: 1212px;
+    height: 25px;
+    background-color: #C4C4C8;
+
+    margin-top: 50px;
+}
+/*表体*/
+.tbody {
+    width: 1380px;
+    height: 600px;
+
+    overflow-y: scroll;
+}
+.biaoBox {
+    width: 1212px;
+
+    background-color: #C4C4C8;
+    text-align: center;
+
+    overflow: hidden;
+
+}
+.biaoBox tr{
+    width: 1212px;
+    height: 100px;
+    /*border: 1px solid red;*/
+}
+.biaoBox tr td{
+    width: 100px;
+    max-height: 100px;
+}
+
+.biaoBox tr td img{
+    width: 100px;
+    height: 80px;
+}
+.biaoBox td  .jiaJian{
+    width: 200px;
+    height: 50px;
+    border: 1px solid white;
+}
+.biaoBox td  .jiaJian span{
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    background-color: #eeeeee;
+    float: left;
+    color: #2B2B2B;
+}
+.biaoBox .shanChu {
+    width: 100px;
+    height: 50px;
+    background-color: var(--zi--bai);
+
+    color: var(--zi-or);
+    font-size: 18px;
+    margin-top: 10px;
+
+    outline: none;
+    border: none;
+}
+/*表尾部*/
+.biaoWei{
+    width: 1212px;
+    height: 25px;
+
+}
+.biaoWei td{
+    text-align: center;
+}
+
+/*表*/
+
+
+/*<!--购物车界面结束-->*/
+
+/*右边页面固定导航开始*/
+.youBianAPP{
+    width: 83px;
+    height: 400px;
+
+    display: inline-flex;
+    position: fixed;
+    top: 35%;
+    left: 95%;
+
+    z-index: 999;
+}
+/*里面的盒子*/
+.youBianAPP>ul li{
+    width: 83px;
+    height: 91px;
+    border: 1px solid var(--bei-xia-rgb);
+
+    text-align: center;
+    overflow: hidden;
+
+}
+/*图片一横排*/
+.youBianAPP>ul li div{
+    width: 150px;
+    height: 30px;
+
+    overflow: hidden;
+
+    margin-top: 20px;
+    margin-left: 26px;
+
+}
+/*鼠标经过改变图片位置*/
+.youBianAPP>ul li:hover div{
+    margin-left: -50px;
+}
+/*图片样式*/
+.youBianAPP>ul li img{
+    width: 30px;
+    height: 30px;
+
+    margin-right: 40px;
+}
+/*导航的p标签 示例：手机APP*/
+.youBianAPP>ul li p{
+
+    font-size: 14px;
+    color: var(--zi-corlor);
+
+    margin-top: 5px;
+}
+/*经过p 标签换成橙色*/
+.youBianAPP>ul li:hover p{
+    color: var(--zi-or);
+}
+
+
+/*右边页面固定导航结束*/
+
+/*导航*/
+.daoHao {
+    /*box-sizing: border-box;*/
+    width: 100%;
+    height: 40px;
+    background-color: var(--bei-color);
+
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+}
+
+.daoHao > ul {
+    width: 770px;
+    height: 40px;
+
+    margin-left: 140px;
+    display: flex;
+}
+
+.daoHao > ul li {
+
+    line-height: 40px;
+    margin-left: 5px;
+}
+
+.daoHao > ul li span {
+    opacity: 0.2;
+    margin-left: 5px;
+}
+
+.daoHao > ul li a {
+
+    color: var(--zi-corlor);
+    text-decoration: none;
+    font-size: 12px;
+
+}
+.daoHao > ul li a:hover{
+    color: var(--zi--bai);
+}
+
+.daoHao ol {
+    width: 150px;
+    height: 40px;
+
+    margin-left: 160px;
+    display: flex;
+
+}
+
+.daoHao ol li {
+
+    line-height: 40px;
+}
+
+.daoHao ol a {
+
+    text-decoration: none;
+    color: var(--zi-corlor);
+    font-size: 12px;
+
+    margin-left: 5px;
+}
+
+.daoHao ol a span {
+    opacity: 0.2;
+    margin-left: 5px;
+}
+
+.daoHao div {
+    width: 120px;
+    height: 40px;
+    background-color: rgb(176, 176, 176, 0.3);
+
+    margin-left: 15px;
+
+    display: flex;
+    align-items: center;
+
+    transition: 0.8s all;
+}
+/*购物车背景鼠标经过*/
+.daoHao div:hover{
+    background-color: var(--zi-or);
+    box-shadow: 0 0 10px 0 var(--zi-or) ;
+}
+
+.daoHao div img {
+    width: 20px;
+    height: 20px;
+
+    margin-left: 10px;
+}
+
+.daoHao div p {
+    color: var(--zi-corlor);
+    font-size: 12px;
+    text-align: center;
+
+    margin-left: 5px;
+}
+.daoHao div #goWuChuYuan {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+
+}
+
+
+    /*导航结束*/
+/*logo一行*/
+.logo {
+    width: 100%;
+    height: 100px;
+
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo > img {
+    width: 56px;
+    height: 56px;
+    margin-left: 150px;
+}
+
+.logo ul {
+    width: 650px;
+    height: 88px;
+
+    margin-left: 170px;
+    display: flex;
+}
+
+.logo ul li {
+    line-height: 88px;
+    margin-left: 20px;
+}
+/*文字 实列：Xiaomi手机*/
+.logo ul li a {
+    text-decoration: none;
+    color: var(--zi-hei);
+}
+.logo ul li a:hover{
+    color: var(--zi-or);
+}
+
+.logo form {
+    width: 350px;
+    height: 88px;
+
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+/*logo input第一个*/
+.logo form input:nth-child(1) {
+    width: 250px;
+    height: 50px;
+    border: 1px solid var(--zi-corlor);
+    outline: none;
+
+    text-indent: 2px;
+    color: var(--zi-corlor);
+
+}
+/*用户点击inout改变样式*/
+.logo form input:focus {
+    border: 1px solid red;
+}
+/*logo input第二个*/
+.logo form input:nth-child(2) {
+    width: 50px;
+    height: 50px;
+}
+
+.logo form img {
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    top: 24px;
+    left: 255px;
+}
+
+.logo #yin {
+    width: 100%;
+    height: 230px;
+    /*border-top: 1px solid var(--zi-corlor);*/
+    box-shadow: 10px 10px 20px 0 var(--zi-corlor);
+    background-color: white;
+
+    z-index: 999;
+
+    display: none;
+
+}
+
+.logo #yin ul {
+    width: 80%;
+    height: 230px;
+    margin-left: 150px;
+}
+
+.logo #yin ul li {
+    width: 180px;
+    height: 230px;
+
+}
+
+.logo #yin img {
+    width: 150px;
+    border-right: 1px solid var(--zi-corlor);
+    margin-top: 40px;
+}
+
+.logo #yin span {
+    display: block;
+    width: 180px;
+    height: 20px;
+
+    line-height: 0;
+    text-align: center;
+    color: var(--zi-hei);
+    font-size: 12px;
+
+}
+
+.logo #yin li span:nth-child(3) {
+    color: var(--zi-or);
+}
+
+/*logo结束*/
+/*无缝滚动开始*/
+
+.wuFengGuanDong {
+    width: 100%;
+    height: 460px;
+
+    display: flex;
+    position: relative;
+
+}
+
+.zha_DaHeZi {
+    width: 100%;
+    height: var(--shikoGao);
+
+}
+
+/*无缝滚动*/
+.zha_box {
+    width: var(--shiKoKu);
+    height: var(--shikoGao);
+
+    position: relative;
+    margin-left: 150px;
+
+}
+
+.zha_box .zha_box2 img {
+
+    width: var(--shiKoKu);
+    height: var(--shikoGao);
+
+    position: absolute;
+
+    opacity: 0;
+    transition: 1s all;
+}
+
+.zha_box .zha_box2 img.op {
+    opacity: 1;
+}
+
+/*四个按钮*/
+.zha_box .zha_annu {
+    width: 200px;
+    height: 40px;
+
+    position: absolute;
+    top: 92%;
+    right: 1%;
+}
+
+.zha_box .zha_annu li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--zi-corlor);
+
+    margin-left: 10px;
+    float: left;
+}
+
+/*左右拉手*/
+.zha_box .zha_dianJiKua li {
+    width: 40px;
+    height: 100px;
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.zha_box .zha_dianJiKua li:nth-child(1) {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    line-height: 100px;
+}
+
+.zha_box .zha_dianJiKua li:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    left: 19%;
+    line-height: 100px;
+}
+
+.zha_box .zha_dianJiKua li .tuPian2 {
+    margin-left: -86px;
+}
+
+.zha_box .zha_dianJiKua li:hover .tuPian2 {
+    margin-left: 0;
+}
+
+.zha_box .zha_dianJiKua li .tuPian1 {
+    margin-left: -125px;
+}
+
+.zha_box .zha_dianJiKua li:hover .tuPian1 {
+    margin-left: -42px;
+}
+
+/*左边文字栏*/
+/*    文字栏位置*/
+.wuFengGuanDong > ul {
+    width: 234px;
+    height: 460px;
+
+    background-color: rgb(176, 176, 176, 0.5);
+
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 150px;
+
+}
+
+/*    文字栏样式*/
+.wuFengGuanDong > ul li {
+    width: 234px;
+    height: 42px;
+
+    color: var(--zi--bai);
+
+    text-indent: 20px;
+    line-height: 42px;
+
+    background-image: url("../img/bairight.png");
+    background-repeat: no-repeat;
+    /*图片不重复*/
+    background-position: 190px 0;
+    /*图片位置*/
+    background-size: 20px 20px;
+    /*图片大小*/
+
+}
+
+.wuFengGuanDong > ul li:hover {
+    background-color: var(--bei--jing-or);
+}
+
+/*鼠标经过文字栏*/
+.wuFengGuanDong > ol{
+    width: 1000px;
+    height: 460px;
+    background-color: var(--zi--bai);
+    border: 1px solid var(--zi-corlor);
+    box-shadow: 0 0 20px 0 var(--zi-corlor);
+
+    position: absolute;
+    left: 384px;
+
+    display: none;
+}
+
+/*无缝滚动结束*/
+
+/*<!--第四列盒子开始 保障服务开始-->*/
+/*背景盒子*/
+.diSiHeZi{
+    width: 100%;
+    height: 171px;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+}
+/*ul居中背景*/
+.diSiHeZi>ul{
+    width: var(--shiKoKu);
+    height: 171px;
+
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+/*选择第一个加点聊*/
+.diSiHeZi>ul li:first-child{
+    width: 234px;
+    height: 171px;
+    background-color: var(--bei--si-zse);
+}
+/*设置li样式*/
+.diSiHeZi>ul li{
+    width: 316px;
+    height: 171px;
+
+    /*margin-right: 10px;*/
+}
+/*li图片样式*/
+.diSiHeZi>ul li img{
+    width: 316px;
+    height: 171px;
+}
+/*第一个li标签的内容*/
+.diSiHeZi>ul li:first-child dl {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/*第一个li标签的内容样式*/
+.diSiHeZi>ul li:first-child dl dd{
+    width: 70px;
+    height: 64px;
+
+    margin-top: 15px;
+    margin-left: 5px;
+    position: relative;
+
+}
+/*/*第一个li标签的内容样式  横线*/
+.diSiHeZi>ul li:first-child dl dd::before{
+    content: " ";
+    width: 1px;
+    height: 64px;
+    background-color: var(--bei-xia-rgb);
+
+    position: absolute;
+    top: 0;
+    left: 64px;
+}
+/*/*第一个li标签的内容样式  竖线*/
+.diSiHeZi>ul li:first-child dl dd::after{
+    content: " ";
+    width: 58px;
+    height: 1px;
+    background-color: var(--bei-xia-rgb);
+
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+/*第一个li标签的内容样式的图片*/
+.diSiHeZi>ul li:first-child dl dd img{
+    width: 24px;
+    height: 24px;
+
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.diSiHeZi>ul li:first-child dl dd p{
+    color: var(--zi-corlor);
+    font-size: 12px;
+
+    margin-left: 5px;
+}
+.diSiHeZi>ul li:first-child dl dd p:hover{
+    color: var(--zi--bai);
+}
+
+/*<!--第四列盒子开始 保障服务结束-->*/
+/*<!--第五盒子 图片开始-->*/
+.wuBox{
+    width: 100%;
+    height: 120px;
+
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+}
+.wuBox img{
+    width: 1226px;
+    height: 120px;
+}
+
+/*<!--第五盒子 图片结束-->*/
+
+/*<!--第6盒子 手机 更多精选开始-->*/
+.liuBox{
+    width: 100%;
+    height: 700px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 20px;
+}
+/*文字栏*/
+.liuBox>ul{
+    width: 1226px;
+    height: 56px;
+
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+/*文字栏样式*/
+.liuBox>ul li{
+    width: 100px;
+    height: 56px;
+
+    color: var(--zi-hei);
+    line-height: 56px;
+}
+/*文字经过*/
+.liuBox>ul li p:hover{
+    color: var(--zi-or);
+}
+
+/*下面的图片展示*/
+.liuWenZiXia{
+    width: 1226px;
+    height: 614px;
+
+    display: flex;
+}
+/*图片左边大图片*/
+.liuWenZiXia>div{
+    width: 234px;
+    height: 614px;
+}
+/*图片左边大图片样式*/
+.liuWenZiXia>div img{
+    width: 234px;
+    height: 614px;
+}
+/*图片右边大盒子*/
+.liuBox .liuWenZiXia>ul{
+    width: 992px;
+    height: 614px;
+
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*左图片 右边盒子布局*/
+.liuBox .liuWenZiXia>ul li a{
+    display: block;
+
+    width: 234px;
+    height: 300px;
+    background-color: var(--zi--bai);
+
+    text-decoration: none;
+    text-align: center;
+
+    position: relative;
+    /*overflow: hidden;*/
+
+    transition: 0.5s all;
+
+
+
+}
+
+/*鼠标经过 li 右边盒子*/
+.liuBox .liuWenZiXia>ul li a:hover{
+    margin-top: -5px;
+    box-shadow: 0 0 20px 0 var(--zi-corlor);
+}
+/*图片右边图片样式*/
+.liuBox .liuWenZiXia>ul li a img{
+    width: 160px;
+
+    margin-top: 15px;
+}
+/*图片右边 图片下方文字 示例：Redmi Note 14 Pr+*/
+.liuBox .liuWenZiXia>ul li a h3{
+    color: var(--zi-hei);
+    font-size: 14px;
+
+    margin-top: 10px;
+}
+/*图片右边 图片下方文字 示例：第三代骁龙7s*/
+.liuBox .liuWenZiXia>ul li a p:nth-child(3){
+    color: var(--zi-corlor);
+    font-size: 12px;
+}
+/*图片右边 图片下方文字 示例：1899元起*/
+.liuBox .liuWenZiXia>ul li a p:nth-child(4){
+    color: var(--liu-wen);
+    font-size: 14px;
+
+    margin-top: 10px;
+}
+/*图片右边 图片下方文字 示例：199元删除线*/
+.liuBox .liuWenZiXia>ul li a p span:nth-child(1){
+    color: var(--zi-corlor);
+    font-size: 14px;
+}
+/*购物车方框*/
+.liuBox .liuWenZiXia>ul li a button .goWuChu{
+    display: block;
+    width: 20px;
+    height: 24px;
+    border-right: 20px;
+    background-color: var(--zi-or);
+    color: var(--zi--bai);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 999;
+
+
+}
+
+/* 加入购物车 */
+.liuBox .liuWenZiXia>ul li button{
+    width: 110px;
+    height: 25px;
+    border: 1px solid var(--zi-or);
+    color: var(--zi-or);
+
+    line-height: 25px;
+
+    position: absolute;
+    /*top: 265px;*/
+    top: 320px;
+    left: 60px;
+
+    transition: 0.8s all;
+    opacity: 0;
+
+
+}
+/* 加入购物车 鼠标经过 */
+.liuBox .liuWenZiXia>ul li:hover button{
+    position: absolute;
+    top: 265px;
+    opacity: 1;
+
+}
+/* 加入购物车 鼠标经过 */
+.liuBox .liuWenZiXia>ul li button:hover{
+    color: var(--zi--bai);
+    background-color: var(--zi-or);
+    box-shadow: 0 0 15px 0  var(--zi-or);
+}
+
+/*<!--第6盒子 手机 更多精选结束-->*/
+
+/*<!--第7盒子 智能穿戴 耳机 穿戴开始 -->*/
+
+/*文字栏的 第二个li*/
+.liuBox>ul li:nth-child(2){
+    width: 200px;
+    height: 100px;
+
+    padding-left: 92px;
+
+}
+/*文字栏的第二个li 的span*/
+.liuBox>ul li:nth-child(2) p span{
+    width: 100px;
+
+
+    margin-right: 20px;
+
+    transition: 0.1s all;
+}
+/*!*!*!*文字栏的第二个li 的第二个span*!*!*/
+.liuBox>ul li p span:nth-child(1){
+    border-bottom: 2px solid var(--liu-wen);
+    color: var(--liu-wen);
+
+}
+
+
+/*<!--第7盒子 智能穿戴 耳机 穿戴结束-->*/
