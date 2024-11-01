@@ -1,0 +1,482 @@
+:root{
+    --zi--bai: #FFFFFF;
+    --zi--hui: #b2b2b2;
+    --box-bj: black;
+}
+/*box01  导航开始----------------------------------*/
+
+/*box01*/
+.daoHan{
+    width: 100%;
+    height: 1.55rem;
+    background-color: red;
+
+    display: flex;
+
+}
+
+/*背景*/
+.daoHan .neiRuGuDing{
+    width: 100%;
+    height: 64px;
+    /*background-color: black;*/
+
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+/*首页盒子*/
+.daoHan .neiRuGuDing ul{
+    width: 41%;
+    height: 64px;
+    /*background-color: royalblue;*/
+
+    overflow: visible;
+    display: flex;
+    align-items: center;
+
+
+
+}
+.daoHan ul li a{
+    display: block;
+    height: 20px;
+
+    text-decoration: none;
+    color: var(--zi--bai);
+    font-size: 0.0945945945945946rem;
+
+    margin-left: 0.13513513513513514rem;
+}
+/*搜索框盒子*/
+.daoHan .neiRuGuDing form{
+    width: 24%;
+    height: 40px;
+    /*background-color: #FFFFFF;*/
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+
+}
+/*第一个搜索框*/
+.daoHan form input:first-child{
+    width: 85%;
+    height: 32px;
+    /*background-color: #E3E5E7;*/
+
+    border-radius: 5px;
+    border:  none;
+    text-indent: 10px;
+    font-size: 0.0945945945945946rem;
+
+    outline: none;
+    margin-left: 2px;
+
+}
+.daoHan form input:nth-child(2){
+
+    width: 32px;
+    height: 32px;
+}
+/*头像盒子*/
+.daoHan .neiRuGuDing dl{
+    width: 32%;
+    height: 64px;
+    /*background-color: #ffeb3b;*/
+
+    display: flex;
+    align-items: center;
+}
+.daoHan dd{
+    width: 60px;
+    height: 50px;
+    border: 1px solid red;
+
+    /*margin-left: 3px;*/
+}
+/*适配手机端*/
+@media screen and (min-width: 0px) and (max-width: 750px) {
+    body{
+        /*background-color: #ffeb3b;*/
+    }
+    .daoHan .neiRuGuDing{
+        justify-content: space-between;
+    }
+    .daoHan .neiRuGuDing ul{
+        display: none;
+    }
+    .daoHan .neiRuGuDing form{
+        width: 60%;
+
+        margin-left: 10%;
+    }
+    .daoHan .neiRuGuDing form input:first-child{
+        width: 90%;
+
+        font-size: 0.3157894736842105rem;
+    }
+    .daoHan .neiRuGuDing dl {
+        width: 50%;
+    }
+}
+/*box01  导航结束----------------------------------*/
+
+
+/*<!--box02 分类开始--------------------------------*/
+/*box*/
+.fenLei{
+    width: 100%;
+    height: 120px;
+    background-color: white;
+
+    overflow: hidden;
+    display: flex;
+}
+/*box div 来个图片*/
+.fenLei>div{
+    width: 9.5%;
+    /*background-color: #03a9f4;*/
+
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+.fenLei>div div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffeb3b;
+
+    margin-left: 10px;
+}
+/*中间分类盒子*/
+.fenLei ul{
+    width: 100%;
+
+    /*background-color: #FC5531;*/
+
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.8s all;
+
+}
+.fenLei ul a{
+    display: block;
+    width: 77px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--zi--hui);
+
+    margin-right: 10px;
+
+
+}
+/*末尾盒子*/
+.fenLei dl {
+    width: 24%;
+    /*background-color: #f441a5;*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-right: 4%;
+
+}
+
+.fenLei dl dd{
+    width: 72px;
+    height: 27px;
+    border-radius: 5px;
+    background-color: var(--zi--hui);
+
+    margin-left: 5px;
+}
+
+/*适配手机端*/
+@media screen and  (max-width: 1200px){
+    /*分类大盒子*/
+    .fenLei{
+        justify-content: center;
+    }
+
+    /*box div 来个图片*/
+    .fenLei>div{
+        display: none;
+    }
+    /*中间分类盒子*/
+    .fenLei ul{
+        width: 50%;
+        justify-content: center;
+    }
+    .fenLei ul li a{
+        margin-top: 5px;
+    }
+
+    /*末尾盒子*/
+    .fenLei dl {
+        width: 30%;
+        /*background-color: #f441a5;*/
+
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 750px){
+    /*分类大盒子*/
+    .fenLei{
+        height: 40px;
+
+    }
+    /*中间分类盒子*/
+    .fenLei ul{
+        width: 100%;
+        justify-content: center;
+    }
+    .fenLei ul a{
+        margin-top: 10px;
+    }
+    /*末尾盒子*/
+    .fenLei dl {
+        display: none;
+    }
+
+}
+/*<!--box02 分类结束-*/
+
+/*<!--box3 视频内容 开始------------------------------------------------------[-->*/
+/*box03 大盒子*/
+.neiRong{
+    width: 96%;
+    height: 5000px;
+
+    background-color: var(--box-bj);
+    margin-left: 4%;
+    margin-top: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    Align-content: flex-start;
+
+}
+/*大盒子 轮播图*/
+.neiRong .lunBoTu{
+    width: 3.581081081081081rem;
+    height: 2.5675675675675675rem;
+    border-radius: 5px;
+    background-color: #f441a5;
+
+}
+/*轮播图右边*/
+.neiRong dl{
+    width: 5.706756756756757rem;
+    /*background-color: #E3E5E7;*/
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 1%;
+}
+/*轮播图右边盒子 的盒子*/
+.neiRong dl a{
+    width: 1.7262162162162162rem;
+    height: 1.5743243243243243rem;
+    border-radius: 5px;
+    /*background-color: #999AAA;*/
+
+    text-decoration: none;
+
+    margin-right: 0.1554054054054054rem;
+    margin-top: 0.06756756756756757rem;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+/*轮播图右边盒子 的视频盒子*/
+.neiRong dl a>div{
+    width: 1.7162162162162162rem;
+    height: 0.9662162162162162rem;
+    border-radius: 5px;
+
+    margin-top: -0.2702702702702703rem;
+    /*background-color: #f441a5;*/
+}
+/*轮播图右边盒子 的视频盒子*/
+.neiRong dl a>div video{
+    /*background-color: #ffeb3b;*/
+
+}
+.neiRong dl a p:nth-child(2) {
+    width:100%;
+    height:0.2972972972972973rem;
+    /*background-color:red;*/
+    font-size:0.11rem;
+}
+.neiRong dl a p:nth-child(3) {
+    width:100%;
+    height:0.11486486486486487rem;
+    /*background-color:#03a9f4;*/
+    color:var(--zi--hui);
+    font-size:0.1rem;
+}
+
+
+/*轮播图下面盒子*/
+.neiRong ul{
+    /*background-color: #03a9f4;*/
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.neiRong ul li a>div{
+    width: 100%;
+    height: 143px;
+    border-radius: 5px;
+
+
+    /*background-color: #f441a5;*/
+}
+.neiRong li a{
+    width: 254px;
+    height: 237px;
+    border-radius: 5px;
+    /*background-color: #999AAA;*/
+
+    font-size: 0.11rem;
+    text-decoration: none;
+
+    margin-right: 0.1554054054054054rem;
+    margin-top: 0.13513513513513514rem;
+
+    display: flex;
+    flex-wrap: wrap;
+
+
+
+}
+.neiRong li a p:nth-child(2) {
+    width:100%;
+    height: 50px;
+    /*background-color:red;*/
+    font-size:0.11rem;
+}
+.neiRong li a p:nth-child(3) {
+    width:100%;
+    height:20px;
+    /*background-color:#03a9f4;*/
+    color:var(--zi--hui);
+    font-size: 0.11rem;
+}
+
+/*适配手机端*/
+@media screen and (min-width: 0px) and (max-width: 400px){
+    .daoHan{
+        height: 2rem;
+    }
+
+    .fenLei ul a{
+        width: 60px;
+        height: 30px;
+    }
+    .neiRong li a{
+        width: 4.842105263157895rem;
+        height: 2.6315789473684212rem;
+
+    }
+    .neiRong dl{
+        display: none;
+    }
+    .neiRong .lunBoTu{
+        width: 100%;
+    }
+    /*内容背景图*/
+    .neiRong {
+        width: 100%;
+
+        margin-left: 0;
+    }
+    .neiRong li a p:nth-child(2){
+        height: 35px;
+        font-size: 11px;
+    }
+    .neiRong ul li a>div{
+        height: 50px;
+    }
+    .neiRong li a p:nth-child(3){
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (min-width: 401px) and (max-width: 750px){
+    .neiRong ul{
+        justify-content: space-between;
+    }
+    .neiRong li a{
+        width: 200px;
+
+
+    }
+    .neiRong dl{
+        display: none;
+    }
+    .neiRong .lunBoTu{
+        width: 100%;
+
+        /*background-color: #ffeb3b;*/
+    }
+    /*内容背景大图*/
+    .neiRong {
+        width: 100%;
+
+        margin-left: 0;
+    }
+    /*轮播图下面的盒子*/
+    .neiRong li a{
+        width: 3.1733333333333333rem;
+        height: 225px;
+
+    }
+    .neiRong li a p:nth-child(2){
+        font-size: 0.21333333333333335rem;
+    }
+
+
+
+}
+@media screen and (min-width: 751px) and (max-width: 900px){
+    .neiRong li a{
+
+        width: 2.7777777777777777rem;
+    }
+    .neiRong li a p:nth-child(2){
+        font-size: 0.21333333333333335rem;
+    }
+    .neiRong li a p:nth-child(3){
+        font-size: 0.21333333333333335rem;
+    }
+    .fenLei{
+        height: 110px;
+    }
+
+}
+
+
+
+
+
+
+
+
+/*
+/*<!--box3 视频内容 结束*/
