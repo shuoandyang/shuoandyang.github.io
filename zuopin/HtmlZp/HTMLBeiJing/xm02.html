@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="files/css/main.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="loading-init">
+        <div class="loading-init__header"></div>
+        <div class="loading-init__status"></div>
+    </div>
+    <div class="stage-container remove">
+        <!-- <div class="page_two hide">
+            <div id="text" style="display:none;"><p>倒计时<br><br>还有<span id="time"></span><br><span id="text1"></span><br>接龙哈！发给你最好的3个朋友<br>超过5个就永远幸福<br>不许在你这里断了！<br>明年到来之前必须发完，不许偷懒<br>想起谁，发给谁，包括我[awa]<br><br>彩蛋:点击屏幕任意地方即可放烟花<br><br><br><span id="copyright"></span></p></div>
+            <div class="type_words" id="contents" style="font-size:1.15rem;line-height:1.5rem;"></div>
+        </div> -->
+        <div class="canvas-container">
+            <canvas id="trails-canvas"></canvas>
+            <canvas id="main-canvas"></canvas>
+        </div>
+
+        <div class="menu hide">
+            <div class="menu__inner-wrap">
+
+                <div class="menu__header">设置</div>
+
+                <form>
+                    <div class="form-option form-option--select">
+                        <label class="shell-type-label">烟花类型</label>
+                        <select class="shell-type"></select>
+                    </div>
+                    <div class="form-option form-option--select">
+                        <label class="shell-size-label">烟花大小</label>
+                        <select class="shell-size"></select>
+                    </div>
+                    <div class="form-option form-option--select">
+                        <label class="quality-ui-label">画质</label>
+                        <select class="quality-ui"></select>
+                    </div>
+                    <div class="form-option form-option--select">
+                        <label class="sky-lighting-label">天空照明</label>
+                        <select class="sky-lighting"></select>
+                    </div>
+                    <div class="form-option form-option--select">
+                        <label class="scaleFactor-label">规模</label>
+                        <select class="scaleFactor"></select>
+                    </div>
+                    <div class="form-option form-option--checkbox">
+                        <label class="auto-launch-label">自动发射</label>
+                        <input class="auto-launch" type="checkbox">
+                    </div>
+                    <div class="form-option form-option--checkbox form-option--finale-mode">
+                        <label class="finale-mode-label">结局模式</label>
+                        <input class="finale-mode" type="checkbox">
+                    </div>
+                    <div class="form-option form-option--checkbox">
+                        <label class="hide-controls-label">隐藏控制器</label>
+                        <input class="hide-controls" type="checkbox">
+                    </div>
+                    <div class="form-option form-option--checkbox form-option--fullscreen">
+                        <label class="fullscreen-label">全屏</label>
+                        <input class="fullscreen" type="checkbox">
+                    </div>
+                    <div class="form-option form-option--checkbox">
+                        <label class="long-exposure-label">打开快门</label>
+                        <input class="long-exposure" type="checkbox">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="help-modal">
+        <div class="help-modal__overlay"></div>
+        <div class="help-modal__dialog">
+            <div class="help-modal__header"></div>
+            <div class="help-modal__body"></div>
+            <button type="button" class="help-modal__close-btn">关闭</button>
+        </div>
+    </div>
+</div>
+
+<script src="files/js/fscreen%401.0.1.js"></script>
+<script src="files/js/Stage%400.1.4.js"></script>
+<script src="files/js/MyMath.js"></script>
+<script src="files/js/script.js"></script>
+</body>
+</html>
