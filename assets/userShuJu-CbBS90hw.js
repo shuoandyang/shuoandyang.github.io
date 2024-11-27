@@ -1,1 +1,0 @@
-import{B as r,e as a,f as n}from"./index-Bx3SwnAl.js";const m=r("user",()=>{const e=a(1738420500),t=n(()=>e.value);function u(s){let i=new Date(s).getTime()/1e3;i<new Date().getTime()/1e3?message("不能小于现在时间"):(message("更改成功","green"),e.value=i)}return{JiShiQiShuJuS:t,JiShiQiGai:u}},{persist:!0});export{m as u};
